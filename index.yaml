@@ -1,0 +1,73 @@
+prompts:
+  - id: socratic
+    title: 苏格拉底式提问
+    category: 思考澄清
+    description: 通过逐问澄清事实、假设和真正的问题。
+    file: prompts/01-socratic.md
+    mode: multi-turn
+  - id: two-layer
+    title: 双层解释法
+    category: 学习理解
+    description: 用小白版和专业版理解一个概念。
+    file: prompts/02-two-layer.md
+    mode: single-turn
+  - id: reverse-engineering
+    title: 反向拆解
+    category: 学习理解
+    description: 从优秀成品提炼可迁移的做法。
+    file: prompts/03-reverse-engineering.md
+    mode: single-turn
+  - id: horizontal-vertical
+    title: 横纵分析法
+    category: 研究分析
+    description: 结合历史脉络和横向比较做深度研究。
+    file: prompts/04-horizontal-vertical.md
+    mode: single-turn
+  - id: fact-check
+    title: 事实核查
+    category: 研究分析
+    description: 区分事实、推论和价值判断并核查证据。
+    file: prompts/05-fact-check.md
+    mode: single-turn
+  - id: expert-panel
+    title: 专家会诊
+    category: 问题解决
+    description: 用互补视角分析问题并综合方案。
+    file: prompts/06-expert-panel.md
+    mode: multi-turn
+  - id: first-principles
+    title: 第一性原理
+    category: 问题解决
+    description: 回到基本事实、目标和约束重新推导。
+    file: prompts/07-first-principles.md
+    mode: single-turn
+  - id: cross-domain
+    title: 跨领域借解
+    category: 问题解决
+    description: 借鉴远距离领域中的解决机制。
+    file: prompts/08-cross-domain.md
+    mode: single-turn
+  - id: steelman
+    title: 双向钢人论证
+    category: 决策实验
+    description: 为两个选项构建最强论证再找关键变量。
+    file: prompts/09-steelman.md
+    mode: multi-turn
+  - id: minimum-experiment
+    title: 用最小实验替代空想
+    category: 决策实验
+    description: 把关键假设变成低成本、可逆实验。
+    file: prompts/10-minimum-experiment.md
+    mode: single-turn
+  - id: hidden-talents
+    title: 挖掘隐藏天赋
+    category: 自我探索
+    description: 通过多轮经历访谈寻找可迁移的底层能力。
+    file: prompts/11-hidden-talents.md
+    mode: multi-turn
+  - id: life-design
+    title: 人生设计术
+    category: 自我探索
+    description: 设计三个五年版本并用原型行动验证。
+    file: prompts/12-life-design.md
+    mode: multi-turn
