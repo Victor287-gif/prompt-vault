@@ -1,0 +1,28 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "prompt-vault",
+  "version": "0.1.0",
+  "description": "浏览、挑选并直接使用 12 个中文思考、学习与决策 Prompt。",
+  "author": {
+    "name": "Victor287-gif"
+  },
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "Prompt Vault",
+        "shortDescription": "浏览并使用 12 个中文 Prompt 模板",
+        "longDescription": "打开中文 Prompt 工具箱，按适用场景、处理方式和结果挑选模板；选定后可查看原文，或结合当前对话直接使用。",
+        "developerName": "Victor287-gif",
+        "category": "Productivity",
+        "capabilities": [
+          "Interactive"
+        ],
+        "defaultPrompt": [
+          "打开 Prompt 工具箱，介绍 12 个模板的适用场景和使用结果，让我挑选。",
+          "根据我当前的问题推荐最合适的 Prompt，并解释原因。",
+          "用第 9 个 Prompt 帮我分析当前的两个选择。"
+        ]
+      }
+    }
+  }
+}
