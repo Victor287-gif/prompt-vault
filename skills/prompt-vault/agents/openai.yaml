@@ -1,0 +1,4 @@
+interface:
+  display_name: "Prompt Vault"
+  short_description: "浏览并直接使用 12 个中文思考与决策 Prompt"
+  default_prompt: "用 $prompt-vault 打开 Prompt 工具箱，让我挑选一个使用。"
