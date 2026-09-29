@@ -2,72 +2,120 @@ prompts:
   - id: socratic
     title: 苏格拉底式提问
     category: 思考澄清
-    description: 通过逐问澄清事实、假设和真正的问题。
+    description: 通过逐问找到真正值得回答的问题。
+    when: 有一团困惑，急着要建议，但还不确定真正的问题是什么。
+    does: AI 最多逐问 6 次，一次一问，追查事实、解释、前提和证据。
+    outcome: 得到已知事实、待验证假设和一个可行动的新问题；你确认后才给建议。
+    example: 总觉得实习不适合我，但说不清该离开还是调整。
     file: prompts/01-socratic.md
     mode: multi-turn
   - id: two-layer
     title: 双层解释法
     category: 学习理解
-    description: 用小白版和专业版理解一个概念。
+    description: 同时用通俗语言和专业术语理解一个概念。
+    when: 要学一个陌生概念，既想先听懂，也想掌握准确的专业表达。
+    does: 先用生活例子解释，再讲专业机制、适用边界和常见误解。
+    outcome: 得到通俗说法与术语的对应表，以及 3 道自测题。
+    example: 我想弄懂 Transformer 的注意力机制。
     file: prompts/02-two-layer.md
     mode: single-turn
   - id: reverse-engineering
     title: 反向拆解
     category: 学习理解
-    description: 从优秀成品提炼可迁移的做法。
+    description: 从优秀成品倒推出可复用的做法。
+    when: 看到一份好作品，想知道自己怎样做出类似质量。
+    does: 倒推它的受众、目标、结构、关键取舍和完成标准。
+    outcome: 得到可迁移规律、操作清单和一个小练习。
+    example: 拆解这个数据看板，学习它怎样让重点一眼可见。
     file: prompts/03-reverse-engineering.md
     mode: single-turn
   - id: horizontal-vertical
     title: 横纵分析法
     category: 研究分析
-    description: 结合历史脉络和横向比较做深度研究。
+    description: 从历史演变、同类对比和未来路径研究一个对象。
+    when: 要系统研究公司、技术、行业或事件，不能只看零散资料。
+    does: 梳理发展时间线，按统一维度比较同类对象，再推演未来路径并标注来源。
+    outcome: 得到可追溯的深度报告，含时间线、对比表和待确认问题。
+    example: 研究某家公司的竞争力是怎样形成的，未来会受什么限制。
     file: prompts/04-horizontal-vertical.md
     mode: single-turn
   - id: fact-check
     title: 事实核查
     category: 研究分析
-    description: 区分事实、推论和价值判断并核查证据。
+    description: 核查说法是否属实，以及结论能否从证据推出。
+    when: 听到一个观点或数据，不确定是真是假，或怀疑推理有跳步。
+    does: 拆开事实、推论和价值判断，联网追查来源、时间与上下文。
+    outcome: 得到可信度分级、关键漏洞和更可靠的结论版本。
+    example: 某文章说一项新技术能降低 80% 成本，这个结论靠谱吗？
     file: prompts/05-fact-check.md
     mode: single-turn
   - id: expert-panel
     title: 专家会诊
     category: 问题解决
-    description: 用互补视角分析问题并综合方案。
+    description: 让互补视角提出并互相质疑解决方案。
+    when: 一个复杂问题涉及多个专业领域，担心单一角度遗漏风险。
+    does: 选 3 个互补视角，分别分析、相互质疑，再找共同事实与真正分歧。
+    outcome: 得到综合方案、适用条件、最大风险、退出条件和第一步。
+    example: 我想做一个校园产品，技术、用户需求和运营该如何权衡？
     file: prompts/06-expert-panel.md
     mode: multi-turn
   - id: first-principles
     title: 第一性原理
     category: 问题解决
-    description: 回到基本事实、目标和约束重新推导。
+    description: 摆脱习惯方案，从基本事实重新推导解决路径。
+    when: 现有办法一直在修补表面，想重新设计解决问题的路径。
+    does: 区分不可绕开的事实、未经验证的假设、目标与资源约束，再从头推导。
+    outcome: 得到新路径、成立前提和验证它的第一步。
+    example: 为什么一定要开线下活动才能招募到用户？
     file: prompts/07-first-principles.md
     mode: single-turn
   - id: cross-domain
     title: 跨领域借解
     category: 问题解决
-    description: 借鉴远距离领域中的解决机制。
+    description: 从其他领域借用解决机制，而非照搬表面做法。
+    when: 本领域常见办法失效，想寻找意想不到但可迁移的思路。
+    does: 抽象问题结构，比较历史案例和至少 3 个远距离领域的机制。
+    outcome: 得到 3 种可迁移方案，并选出一个低成本、可逆实验。
+    example: 学习社群留存很低，其他领域有什么值得借鉴的机制？
     file: prompts/08-cross-domain.md
     mode: single-turn
   - id: steelman
     title: 双向钢人论证
     category: 决策实验
-    description: 为两个选项构建最强论证再找关键变量。
+    description: 为两个选择分别建立最强论证后再判断。
+    when: 在两个选项之间纠结，双方都有道理，担心自己只看见偏好的证据。
+    does: 强化双方理由、收益与风险，找出真正分歧，只问一个最关键的问题。
+    outcome: 你回答后得到明确判断、适用条件和下一步行动。
+    example: 毕业后应该先就业，还是先读研？
     file: prompts/09-steelman.md
     mode: multi-turn
   - id: minimum-experiment
     title: 用最小实验替代空想
     category: 决策实验
-    description: 把关键假设变成低成本、可逆实验。
+    description: 用短周期行动验证最可能改变结论的假设。
+    when: 对一个选择反复空想，缺少真实反馈，又不想投入太多成本。
+    does: 找出 3 个关键假设，选最重要的一个，设计低成本可逆实验。
+    outcome: 得到具体步骤、观察指标、继续或停止标准，以及明天的第一步。
+    example: 我想试试做自媒体，但不知道是否值得长期投入。
     file: prompts/10-minimum-experiment.md
     mode: single-turn
   - id: hidden-talents
     title: 挖掘隐藏天赋
     category: 自我探索
-    description: 通过多轮经历访谈寻找可迁移的底层能力。
+    description: 从经历和能量模式寻找被忽视的底层优势。
+    when: 不清楚自己擅长什么，或擅长的事做起来却很消耗。
+    does: 逐问童年兴趣、无意识胜任区、能量来源和羡慕对象，依据经历找线索。
+    outcome: 得到天赋使用说明书、适合的环境与工作方式，以及 30 天验证实验。
+    example: 我总觉得自己没有特别突出的能力，想找找真正的优势。
     file: prompts/11-hidden-talents.md
     mode: multi-turn
   - id: life-design
     title: 人生设计术
     category: 自我探索
-    description: 设计三个五年版本并用原型行动验证。
+    description: 把人生方向变成多个可尝试的版本和原型行动。
+    when: 对未来方向迷茫，不想马上押注唯一答案，想先看清自己和可能的路。
+    does: 逐问健康、工作、娱乐、爱、价值观和心流，生成 3 个不同的五年版本。
+    outcome: 得到人生设计蓝图，以及本周能开始的低成本原型行动。
+    example: 我不知道毕业后该往哪走，想认真比较几种人生方向。
     file: prompts/12-life-design.md
     mode: multi-turn
