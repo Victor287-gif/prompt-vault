@@ -1,0 +1,126 @@
+# 阶段参数与资源预算
+
+## 配置及来源
+
+| 字段 | 类型及单位 | 计算公式或候选集合 | 合法范围与校验 | 固定配置或运行参数 | 消费阶段 |
+|---|---|---|---|---|---|
+| | | | | | |
+
+给出配置推导顺序：输入信息、候选算法及分块、资源预算、最终选择。按需描述辅助记录，字段都有生产与消费位置。
+
+## 阶段参数契约
+
+多阶段或多种调用变体分别列出完整有序参数表，并与 HostLaunch.md 的实际取值及 Kernel.md 的消费位置逐项对应。
+
+| 顺序 | 参数或对象 | 形状、类型及维度关系 | 布局、步长及容量 | 生产者与消费者 | 有效期及可选状态 |
+|---|---|---|---|---|---|
+| | | | | | |
+
+定义跨对象维度等式、可变维度的上下界及来源、标量单位。逻辑布局转换后仍需解释的信息通过明确参数或可区分的契约传递。可选对象的缺省状态与真实最小对象保持可区分。
+
+选一个最小合法输入和一个维度或配置变化的输入，列出全部实际参数取值，核对维度关系、数量、顺序和消费条件。
+
+## 辅助记录与临时存储布局（按需）
+
+| 区域或记录 | 类型及单位 | 偏移、步长及容量公式 | 初始化或生产方 | 可见时点与读取检查 |
+|---|---|---|---|---|
+| | | | | |
+
+按实际使用的区域展开数据、辅助记录、状态及同步信息，总容量覆盖全部区域及对齐间隔。间接寻址或变长结构中的数据值在生成地址前检查安全范围。并发状态更新说明独占、原子或合并协议。
+
+## 物理资源与生命周期
+
+| 对象及内存池 | 物理形状、类型及份数 | 字节公式 | 分配范围与活跃区间 | 地址复用条件 | 容量及余量 |
+|---|---|---|---|---|---|
+| | | | | | |
+
+分别核算实际物理分配与各阶段活跃峰值。跨池副本、格式填充、临时转换、常驻状态和同时在途版本各自计入；明确地址复用且生命周期不冲突时才共享空间。每个实际内存池及共享范围分别与目标容量比较。
+
+采用流水时，份数引用 Kernel.md §8 的生命周期；资源超限给配置调整或符合接口契约的另一条路径。
+
+## 边界调用契约
+
+| 条件 | 各输出分配及初值 | 需要的执行阶段 | 参数或资源变化 | 规格依据 |
+|---|---|---|---|---|
+| | | | | |
+
+逐输出推导边界调用。输出范围为空、操作范围为空、可选对象关闭等条件按实际语义展开，并与 HostLaunch.md 的调度及 Validation.md 的预期一致。
+
+## 参考示例：配置与资源计划
+
+以下保留先估算、后选择的参考骨架，来源于 `flash_attn.py` 的配置与资源职责拆分。示例假设一维 ND、单位步长、分配尺寸已满足对齐，输入输出使用相同深度。`algorithm_temporaries_bytes` 包括实际需要的累计状态和其他临时对象；字段、容量及配置边界由设计实例化。
+
+```python
+# 设计伪代码：填入真实字段、公式与容量证据后再实现。
+@dataclass(frozen=True)
+class TileConfig:
+    name: str
+    tile_elems: int
+    pipeline_depth: int
+
+@dataclass(frozen=True)
+class ResourcePlan:
+    config_name: str
+    ub_bytes: int
+    workspace_bytes: int
+
+def estimate_resources(config, input_meta):
+    elem_bytes = dtype_size(input_meta.dtype)  # 按真实 dtype 查表
+    input_buf = config.tile_elems * elem_bytes * config.pipeline_depth
+    output_buf = config.tile_elems * output_elem_bytes(input_meta) * config.pipeline_depth
+    temporaries = algorithm_temporaries_bytes(config, input_meta)
+    return ResourcePlan(
+        config.name,
+        ub_bytes=input_buf + output_buf + temporaries,
+        workspace_bytes=workspace_formula(config, input_meta),
+    )
+
+def select_config(input_meta, limits):
+    for config in candidate_configs(input_meta):
+        plan = estimate_resources(config, input_meta)
+        if plan.ub_bytes <= limits.usable_ub and plan.workspace_bytes <= limits.workspace:
+            return config, plan
+    raise UnsupportedConfiguration(input_meta)
+```
+
+把每个函数中的占位计算展开成上文表格的**逐项字节公式**。若有 L1/L0A/L0B/L0C，分别增加字段和容量不等式；按阶段活跃集算峰值，不把所有候选分支相加。选择结果应能在 `TemplatePartition.md` 找到唯一执行路径。
+
+## 参考示例：符号维度与参数绑定
+
+以下是独立的二维正尺寸规格示例，用共享符号表达输入输出维度相等、用独立符号表达输入行步长。它演示参数契约的绑定；`MatrixViewKernel` 是需另行定义的算法占位，与一维启动示例分别实例化。
+
+实际使用时，依据目标版本的 DSL 源码或官方资料核对维度与规格声明规则；变量上界由实际支持域给出。
+
+```python
+import cannbotdsl
+from cannbotdsl import Tensor, dtypes
+
+
+class MatrixViewProgram:
+    def __init__(self, tile_shape, block_dim):
+        self.tile_shape = tile_shape
+        self.block_dim = block_dim
+
+    @cannbotdsl.host
+    def run(self, x: Tensor, out: Tensor, attr: int):
+        op = MatrixViewKernel(self.tile_shape)  # 算法占位
+        op[self.block_dim](x, out, attr)
+
+
+# 形状、类型及确定上界由接口和资源契约给出。
+batch = cannbotdsl.Dim("B", min=1, max=MAX_BATCH)
+length = cannbotdsl.Dim("L", min=1, max=MAX_LENGTH)
+input_row_stride = cannbotdsl.Dim("X_ROW_STRIDE", min=1)
+input_spec = cannbotdsl.TensorSpec(
+    (batch, length), input_dtype, stride=(input_row_stride, 1)
+)
+output_spec = cannbotdsl.TensorSpec((batch, length), output_dtype)
+entry = MatrixViewProgram(tile_shape, block_dim)
+compiled = cannbotdsl.compile(
+    entry.run, input_spec, output_spec, dtypes.int64  # x、out、attr
+)
+```
+
+此例的二维输入采用行内连续布局；行步长与存储容量的合法关系仍由接口校验。可选状态、零尺寸或其他布局按阶段参数表另行表达。
+
+共享符号与实际形状的绑定需要逐对象核对；确定上界与支持域及资源预算一致。

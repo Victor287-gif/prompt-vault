@@ -1,0 +1,4 @@
+interface:
+  display_name: "CANN 算子研究知识库"
+  short_description: "查官方资料、分析瓶颈、审核优化方案"
+  default_prompt: "使用 CANN 算子研究知识库，先查相关资料，再分析当前算子的优化机会。"

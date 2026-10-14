@@ -1,0 +1,30 @@
+---
+type: Optimization
+title: "Dynamic block size"
+description: "cpp __aicore__ inline uint32_t calc_block_size(int dim, int divisor) { int raw = std::min(dim / divisor, 1024); return ((std::max(raw, 1) + 31) / 32) 32; // round to warp } Note: The function must be"
+tags: [task.optimization, topic.implementation]
+status: draft
+sources:
+  - resource: https://gitcode.com/cann/cannbot-skills/blob/bb96c9c595c7a8e96745d365291769dc48319c22/plugins-community/ascendc-port-orchestrator/kb/okf/runbooks/operator-optimization/p-p4-dynamic-block-size.md
+    role: primary
+created_at: "2026-07-12T16:00:00Z"
+updated_at: "2026-07-12T16:00:00Z"
+platforms: []
+---
+
+# Dynamic block size
+
+> 原 OKF v1 卡号：**P-P4**。
+
+## 优化点
+
+```cpp
+__aicore__ inline uint32_t calc_block_size(int dim, int divisor) {
+    int raw = std::min(dim / divisor, 1024);
+    return ((std::max(raw, 1) + 31) / 32) * 32;  // round to warp
+}
+```
+
+**Note**: The function must be annotated with `__aicore__`.
+
+<!-- 迁移自 porter kb/target/ascendc/patterns/domains/thread_utilization.md（P-P4，convert_patterns_to_okf.py）。confidence 未升格。 -->

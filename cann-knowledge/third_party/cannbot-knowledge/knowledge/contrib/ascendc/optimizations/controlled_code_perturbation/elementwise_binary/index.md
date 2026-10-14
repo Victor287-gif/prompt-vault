@@ -1,0 +1,45 @@
+# Elementwise · binary 优化经验
+
+## 知识卡
+
+- [heaviside：计算优化](heaviside_compute_a2.md)：heaviside 算子的计算优化经验，关注混合或尚未确定的瓶颈。
+- [gelu_grad：流水与内存优化](gelu_grad_pipeline_memory_a2_id_0.md)：gelu_grad 算子的流水与内存优化经验，关注标量开销。
+- [gcd：并行优化](gcd_optimization_a2_id_0.md)：gcd 算子的并行优化经验，关注冗余计算。
+- [lerp：循环计算优化](lerp_loop_compute_compute_a2_id_0.md)：lerp 算子的循环计算优化经验，关注流水线停顿。
+- [gcd：循环计算优化](gcd_loop_compute_compute_a2_id_0.md)：gcd 算子的循环计算优化经验，关注混合或尚未确定的瓶颈。
+- [gcd：冗余消除优化](gcd_optimization_a2_id_1.md)：gcd 算子的冗余消除优化经验，关注标量开销。
+- [fast_gelu_grad：内存优化](fast_gelu_grad_memory_a2_id_0.md)：fast_gelu_grad 算子的内存优化经验，关注混合或尚未确定的瓶颈。
+- [lerp：计算优化](lerp_compute_a2.md)：lerp 算子的计算优化经验，关注标量开销。
+- [addcdiv：并行切核优化](addcdiv_parallel_kernel_a2_id_0.md)：addcdiv 算子的并行切核优化经验，关注标量开销。
+- [add_custom：并行切核优化](add_custom_parallel_kernel_a2.md)：add_custom 算子的并行切核优化经验，关注标量开销。
+- [gcd：冗余消除优化](gcd_optimization_a2_id_2.md)：gcd 算子的冗余消除优化经验，关注混合或尚未确定的瓶颈。
+- [gcd：冗余消除优化](gcd_optimization_a2_id_3.md)：gcd 算子的冗余消除优化经验，关注标量开销。
+- [cross：冗余消除优化](cross_optimization_a2.md)：cross 算子的冗余消除优化经验，关注混合或尚未确定的瓶颈。
+- [addcmul：计算优化](addcmul_compute_a2.md)：addcmul 算子的计算优化经验，关注混合或尚未确定的瓶颈。
+- [gcd：循环计算优化](gcd_loop_compute_compute_a2_id_1.md)：gcd 算子的循环计算优化经验，关注混合或尚未确定的瓶颈。
+- [gcd：冗余消除优化](gcd_optimization_a2_id_4.md)：gcd 算子的冗余消除优化经验，关注标量开销。
+- [gcd：冗余消除优化](gcd_optimization_a2_id_5.md)：gcd 算子的冗余消除优化经验，关注标量开销。
+- [gcd：冗余消除优化](gcd_optimization_a2_id_6.md)：gcd 算子的冗余消除优化经验，关注流水线停顿。
+- [lerp：内存优化](lerp_memory_a2_id_0.md)：lerp 算子的内存优化经验，关注数据搬运。
+- [fast_gelu_grad：内存优化](fast_gelu_grad_memory_a2_id_1.md)：fast_gelu_grad 算子的内存优化经验，关注存储体冲突。
+- [addcmul：内存优化](addcmul_memory_a2.md)：addcmul 算子的内存优化经验，关注混合或尚未确定的瓶颈。
+- [gelu_grad：流水与内存优化](gelu_grad_pipeline_memory_a2_id_1.md)：gelu_grad 算子的流水与内存优化经验，关注标量开销。
+- [gelu_grad：并行切核优化](gelu_grad_parallel_kernel_a2.md)：gelu_grad 算子的并行切核优化经验，关注并行度。
+- [gcd：并行优化](gcd_optimization_a2_id_7.md)：gcd 算子的并行优化经验，关注并行度。
+- [gcd：并行与 Tiling优化](gcd_tiling_a2.md)：gcd 算子的并行与 Tiling优化经验，关注并行度。
+- [gelu_grad：计算优化](gelu_grad_compute_a2.md)：gelu_grad 算子的计算优化经验，关注标量开销。
+- [fast_gelu_grad：Tiling优化](fast_gelu_grad_tiling_a2.md)：fast_gelu_grad 算子的Tiling优化经验，关注Tile 数量开销。
+- [fast_gelu_grad：流水与并行优化](fast_gelu_grad_pipeline_parallel_pipeline_a2.md)：fast_gelu_grad 算子的流水与并行优化经验，关注标量开销。
+- [lerp：并行切核优化](lerp_parallel_kernel_a2.md)：lerp 算子的并行切核优化经验，关注标量开销。
+- [lerp：搬运与内存优化](lerp_memory_a2_id_1.md)：lerp 算子的搬运与内存优化经验，关注数据搬运。
+- [addcdiv：并行切核优化](addcdiv_parallel_kernel_a2_id_1.md)：addcdiv 算子的并行切核优化经验，关注标量开销。
+- [gcd：循环计算优化](gcd_loop_compute_compute_a2_id_2.md)：gcd 算子的循环计算优化经验，关注流水线停顿。
+- [gcd：循环计算优化](gcd_loop_compute_compute_a2_id_3.md)：gcd 算子的循环计算优化经验，关注流水线停顿。
+- [fast_gelu_grad：内存优化](fast_gelu_grad_memory_a2_id_2.md)：fast_gelu_grad 算子的内存优化经验，关注混合或尚未确定的瓶颈。
+- [lerp：循环计算优化](lerp_loop_compute_compute_a2_id_1.md)：lerp 算子的循环计算优化经验，关注数据搬运。
+- [heaviside：Tiling优化](heaviside_tiling_a2_id_0.md)：heaviside 算子的Tiling优化经验，关注混合或尚未确定的瓶颈。
+- [heaviside：Tiling优化](heaviside_tiling_a2_id_1.md)：heaviside 算子的Tiling优化经验，关注标量开销。
+- [gcd：冗余消除优化](gcd_optimization_a2_id_8.md)：gcd 算子的冗余消除优化经验，关注标量开销。
+- [heaviside：循环计算优化](heaviside_loop_compute_compute_a2.md)：heaviside 算子的循环计算优化经验，关注流水启动开销。
+- [gcd：内存优化](gcd_memory_a2.md)：gcd 算子的内存优化经验，关注流水线停顿。
+- [lerp：搬运与内存优化](lerp_memory_a2_id_2.md)：lerp 算子的搬运与内存优化经验，关注标量开销。

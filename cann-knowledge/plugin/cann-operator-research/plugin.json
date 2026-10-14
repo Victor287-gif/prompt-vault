@@ -1,0 +1,21 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "cann-operator-research",
+  "version": "1.0.0",
+  "description": "基于 CANNBot 官方仓库快照的算子研究知识入口，通过 GitHub MCP 或专用只读 MCP 按需查原文、核对架构与优化条件。独立封装，非官方产品。",
+  "author": {
+    "name": "Victor287-gif"
+  },
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "CANN 算子研究知识库",
+        "shortDescription": "查官方资料、分析瓶颈、审核优化方案",
+        "longDescription": "共享 CANNBot Skills 与 CANNBot Knowledge 的固定版本资料。可经现有 GitHub MCP 读取，无需本地电脑在线；已有专用知识 MCP 时优先使用检索接口。不会自动运行设备实验或提交 OJ。",
+        "developerName": "Victor287-gif",
+        "category": "Productivity",
+        "defaultPrompt": "使用 CANN 算子研究知识库，先查官方优化资料，再结合我给的源码和实验结果分析优化方案。"
+      }
+    }
+  }
+}

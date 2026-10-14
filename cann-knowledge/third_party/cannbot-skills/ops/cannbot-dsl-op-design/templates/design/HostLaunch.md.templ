@@ -1,0 +1,119 @@
+# 调度与启动方案
+
+## 1. 输入检查与输出所有权
+
+| 检查条件 | 合法域与依据 | 信息可获得的位置 | 失败行为 | 接口规则 |
+|---|---|---|---|---|
+| | | | | |
+
+逐输出给分配方、形状、类型、布局及别名约束，说明完整写入的条件。尺寸依赖数据值时，给尺寸生产、取得和后续消费的顺序。
+
+| 边界条件 | 各输出的形状及初始化 | 执行或提前完成的条件 | 完成与返回行为 |
+|---|---|---|---|
+| | | | |
+
+## 2. 配置选择
+
+说明判定信息、候选生成及筛选顺序、资源检查、路径选择和超限处置。各项选择关联 TemplatePartition.md 与 LaunchData.md 中的公式和支持域。
+
+## 3. 任务与坐标划分
+
+定义总任务数和执行单元数，给执行单元到任务区间、各任务到输出范围及内部工作项的公式。结合目标设备资源和负载均衡说明选取依据，证明覆盖完整及共享写入满足所有权协议。
+
+| 分支 | 任务数公式 | 执行单元数公式 | 单元到任务及输出范围 | 边界与不均衡处理 |
+|---|---|---|---|---|
+| | | | | |
+
+协作执行时，任务内部角色及汇合规则引用 Kernel.md；状态相互依赖的工作项遵守其推进顺序。
+
+## 4. 参数与布局准备
+
+按 LaunchData.md 的参数顺序列实际取值、形状关系、步长、容量、可选状态和初始化步骤。视图给共享地址依据，实际重排列入执行阶段并计入资源预算。
+
+## 5. 启动、阶段边界与生命周期
+
+| 阶段 | 任务范围及参数 | 前置完成条件 | 结果可见条件 | 临时资源有效期 | 失败处置 |
+|---|---|---|---|---|---|
+| | | | | | |
+
+用流程图或算法伪代码说明配置、分配、启动、等待及返回关系。跨阶段依赖明确同步参与者与完成发布；资源保持有效至最后使用完成。
+
+调用、重复执行及导出契约有要求时，说明共享配置的范围、产物拥有者与释放时点。
+
+## 6. 操作职责
+
+| 公开入口至结果返回的操作 | 信息准备或计算职责 | 输入与输出 | 归属阶段及依据 |
+|---|---|---|---|
+| | | | |
+
+追踪所有会改变数据的操作，使计算、重排、初始化及合并都对应明确阶段、工作量和资源。
+
+## 参考示例：公开入口、构建与启动
+
+```text
+取得合法输入信息
+→ 生成与筛选候选配置
+→ 核对各内存池及临时存储
+→ 确定任务划分与阶段参数
+→ 启动、完成及返回
+```
+
+以下保留显式构建与启动的参考骨架，调用形态参考 `flash_kda.py`。本例与 Kernel.md 的一维、同形输出、带临时工作区示例对应；具名检查、分配、规格构造及边界函数是需要按设计展开的抽象操作。配置、参数规格与每次调用的顺序在本例中逐项对应。
+
+实际使用时，依据目标版本的 DSL 源码或官方资料核对程序构建、调用、持有与释放的生命周期约束。
+
+```python
+import cannbotdsl
+from cannbotdsl import Tensor, TensorSpec, dtypes, host
+
+
+class OperatorProgram:
+    def __init__(self, config, input_dtype, output_dtype, accumulator_dtype):
+        self.tile_elems = config.tile_elems
+        self.pipeline_depth = config.pipeline_depth
+        self.input_dtype = input_dtype
+        self.output_dtype = output_dtype
+        self.accumulator_dtype = accumulator_dtype
+
+    @host
+    def run(self, x: Tensor, out: Tensor, ws: Tensor, attr: int, block_dim: int):
+        op = OperatorKernel(
+            self.tile_elems, self.input_dtype, self.output_dtype,
+            self.accumulator_dtype, self.pipeline_depth,
+        )
+        op[block_dim](x, out, ws, attr)
+
+
+def build_program(config, input_meta, plan):
+    entry = OperatorProgram(
+        config, input_meta.dtype, output_dtype_from_contract(input_meta),
+        accumulator_dtype_from_contract(input_meta),
+    )
+    # 规格包含全部形状、类型、步长及工作区容量。
+    input_spec, output_spec, workspace_spec = make_tensor_specs(config, input_meta, plan)
+    return cannbotdsl.compile(
+        entry.run, input_spec, output_spec, workspace_spec,
+        dtypes.int64,  # attr
+        dtypes.int64,  # block_dim
+    )
+
+
+def public_op(x, *, attr):
+    check_interface(x, attr)
+    meta = metadata_of(x, attr)
+    out = allocate_output(output_shape(x, attr), output_dtype_from_contract(meta), x.device)
+    if boundary_completes_without_launch(meta):
+        return initialize_and_return_boundary_outputs(out, meta)
+    config, plan = select_config(meta, device_limits(x.device))
+    ws = allocate_workspace(plan.workspace_bytes, x.device)
+    block_dim = choose_blocks(x.shape, config, device_limits(x.device))
+    with build_program(config, meta, plan) as program:
+        program(x, out, ws, attr, block_dim)
+    return out
+```
+
+本例的 `@host` 参数与规格顺序均为 x、out、ws、attr、block_dim，计算入口接收 x、out、ws、attr，长度从一维输入形状取得。分块、深度与类型在构建时确定，attr 与 block_dim 在调用时绑定。边界函数逐输出遵循接口契约。
+
+实际路径的工作区、输出个数及参数变体以阶段参数表为准，修改时同步检查入口、规格与实参。跨阶段保持临时资源有效至最后使用完成。
+
+示例在单次调用内管理程序；重复调用的持有与释放位置由生命周期契约确定。构建、复用及缓存行为分别定义。

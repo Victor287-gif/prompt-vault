@@ -1,0 +1,60 @@
+# 矩阵计算搬运
+
+- [asc_copy_gm2l0a](asc_copy_gm2l0a.md)：将数据从GM搬运到L0A Buffer。
+- [asc_copy_gm2l0b](asc_copy_gm2l0b.md)：将矩阵数据从Global Memory搬运到L0B Buffer。
+- [asccopygm2l1](asc_copy_gm2l1/index.md)：共 3 张知识卡（如 asc_copy_gm2l1_arch_3510（2D矩阵搬运模式）、asc_copy_gm2l1、asc_copy_gm2l1_arch_3510（高维切分数据搬运））。
+- [asc_copy_gm2l1_align](asc_copy_gm2l1_align.md)：对矩阵数据进行实时padding，完成padding后将数据从Global Memory搬运到L1 Buffer。需要与asc_set_gm2l1_loop_size、asc_set_gm2l1_loop1_stride、asc_set_gm2l1_loop2_stride和asc_set_gm2l1_pad配合使用。
+- [asc_copy_gm2l1_dn2nz](asc_copy_gm2l1_dn2nz.md)：将数据从Global Memory搬运到L1 Buffer，并在搬运过程中进行DN到Nz格式的转换，使其满足后续矩阵计算对分形列连续性的要求。
+- [asccopygm2l1nd2nz](asc_copy_gm2l1_nd2nz/index.md)：共 2 张知识卡（如 asc_copy_gm2l1_nd2nz、asc_copy_gm2l1_nd2nz_arch_3510）。
+- [asccopyl0c2gm](asc_copy_l0c2gm/index.md)：共 2 张知识卡（如 asc_copy_l0c2gm、asc_copy_l0c2gm_arch_3510）。
+- [asccopyl0c2l1](asc_copy_l0c2l1/index.md)：共 2 张知识卡（如 asc_copy_l0c2l1、asc_copy_l0c2l1）。
+- [asc_copy_l0c2ub](asc_copy_l0c2ub.md)：将矩阵计算结果从L0C Buffer搬运至Unified Buffer，搬运过程中可同步支持随路量化、随路激活、随路格式转换（Nz2ND/Nz2DN）等能力组合。
+- [asccopyl12bt](asc_copy_l12bt/index.md)：共 2 张知识卡（如 asc_copy_l12bt、asc_copy_l12bt）。
+- [asccopyl12fb](asc_copy_l12fb/index.md)：共 2 张知识卡（如 asc_copy_l12fb、asc_copy_l12fb）。
+- [asc_copy_l12gm](asc_copy_l12gm.md)：将数据从L1 Buffer搬运到Global Memory。
+- [asccopyl12l0a](asc_copy_l12l0a/index.md)：共 3 张知识卡（如 asc_copy_l12l0a_arch_3510（2D矩阵搬运）、asc_copy_l12l0a_arch_3510（3D矩阵搬运）、asc_copy_l12l0a）。
+- [asc_copy_l12l0a_mx](asc_copy_l12l0a_mx.md)：负责完成MX矩阵计算过程中所需的左矩阵对应的量化系数的搬运，数据通路为L1 Buffer->L0A_MX Buffer。其中左量化系数矩阵以32字节（固定数据类型为fp8_e8m0_t、分形大小为16×2的）的数据分形为单位进行搬运。
+- [asc_copy_l12l0a_trans](asc_copy_l12l0a_trans.md)：该接口实现带转置的2D格式数据从L1 Buffer到L0A Buffer的加载。
+- [asccopyl12l0b](asc_copy_l12l0b/index.md)：共 3 张知识卡（如 asc_copy_l12l0b_arch_3510（2D矩阵搬运）、asc_copy_l12l0b_arch_3510（3D矩阵搬运）、asc_copy_l12l0b）。
+- [asc_copy_l12l0b_mx](asc_copy_l12l0b_mx.md)：负责完成MX矩阵计算过程中所需的右矩阵对应的量化系数的搬运，数据通路为L1 Buffer->L0B_MX Buffer。其中右量化系数矩阵以32字节（固定数据类型为fp8_e8m0_t、分形大小为2×16的）的数据分形为单位进行搬运。
+- [asc_copy_l12l0b_sparse](asc_copy_l12l0b_sparse.md)：用于搬运存放在L1 Buffer里的512B大小的稠密权重矩阵到L0B Buffer里，同时读取128B大小的索引矩阵用于稠密矩阵的稀疏化。
+- [asccopyl12l0btrans](asc_copy_l12l0b_trans/index.md)：共 2 张知识卡（如 asc_copy_l12l0b_trans、asc_copy_l12l0b_trans）。
+- [asc_copy_l12l0c](asc_copy_l12l0c.md)：将矩阵由L1 Buffer搬运到L0C Buffer中。该搬运支持的数据类型如下： - bfloat16_t->bfloat16_t - half->half - float->half - float->bfloat16_t - float->float - int32_t->int32_t - uint32_t->uint32_t
+- [asc_copy_l12ub](asc_copy_l12ub.md)：将数据从L1 Buffer搬运到Unified Buffer（UB）中。
+- [asc_fill_l0a](asc_fill_l0a.md)：将value的二进制值赋值给dst，对L0A Buffer的Local Memory进行初始化。
+- [asc_fill_l0b](asc_fill_l0b.md)：将value的二进制值赋值给dst，对L0B Buffer的Local Memory进行初始化。
+- [asc_fill_l1](asc_fill_l1.md)：将一个标量填充值写入L1 Buffer的目的地址，并将填充值广播到多个32字节分形块中，可用于L1 Buffer的内存初始化。需要通过asc_fill_value_config配置的重复次数、单次分形块数、相邻重复之间的间隔。
+- [asc_get_l0c2gm_prequant](asc_get_l0c2gm_prequant.md)：数据搬运过程中进行随路量化时，通过调用该接口获取量化操作前矢量的起始地址。
+- [asc_get_l0c2gm_relu](asc_get_l0c2gm_relu.md)：数据搬运过程中进行随路量化时，通过调用该接口获取ReLU操作前矢量的起始地址。
+- [asc_get_l0c2gm_unitflag](asc_get_l0c2gm_unitflag.md)：数据搬运过程中进行随路量化时，通过调用该接口获取unit_flag设置。
+- [asc_load_image_to_cbuf](asc_load_image_to_cbuf.md)：将图像数据从Global Memory搬运到L1 Buffer。
+- [asc_set_gm2l1_loop1_stride](asc_set_gm2l1_loop1_stride.md)：将数据从Global Memory (GM)搬运到L1 Buffer时，通过调用该接口设置内层循环中相邻迭代数据块间的间隔。
+- [asc_set_gm2l1_loop2_stride](asc_set_gm2l1_loop2_stride.md)：将数据从Global Memory (GM)搬运到L1 Buffer时，通过调用该接口设置外层循环中相邻迭代数据块间的间隔。
+- [asc_set_gm2l1_loop_size](asc_set_gm2l1_loop_size.md)：将数据从Global Memory (GM)搬运到L1 Buffer时，通过调用该接口设置数据搬运流程中的循环次数。
+- [asc_set_gm2l1_nz_para](asc_set_gm2l1_nz_para.md)：本接口用于配置从Global Memory搬运至L1 Buffer过程中，ND2Nz或DN2Nz格式转换所需的目的地址布局，包括矩阵数量、目的Nz矩阵中相邻行的步长、相邻Z矩阵的步长以及相邻Nz矩阵的步长。配置完成后，由后续调用的asc_copy_gm2l1_nd2nz或asc_copy_gm2l1_dn2nz接口使用。
+- [asc_set_gm2l1_pad](asc_set_gm2l1_pad.md)：将数据从Global Memory (GM)非对齐搬运到L1 Buffer时，通过调用该接口设置连续搬运数据块左右两侧需要填补的数据值。
+- [asc_set_l0c2gm_channel_para](asc_set_l0c2gm_channel_para.md)：本接口用于在L0C Buffer搬出并执行Nz2DN格式转换时，配置源Nz矩阵中相邻行的地址偏移。配置写入后，由后续开启Nz2DN功能的asc_copy_l0c2gm、asc_copy_l0c2l1或asc_copy_l0c2ub接口使用；未开启Nz2DN功能时，本配置不生效。
+- [asc_set_l0c2gm_config](asc_set_l0c2gm_config.md)：数据搬运过程中进行随路量化时，通过调用该接口设置量化流程中的矢量量化参数。
+- [asc_set_l0c2gm_lrelu_alpha](asc_set_l0c2gm_lrelu_alpha.md)：用于设置asc_copy_l0c2l1或asc_copy_l0c2gm接口计算过程中使用的Leaky ReLU alpha值。该值只支持half和float两种数据类型。
+- [asc_set_l0c2gm_nz2nd](asc_set_l0c2gm_nz2nd.md)：本接口用于在L0C Buffer搬出接口asc_copy_l0c2gm、asc_copy_l0c2l1、asc_copy_l0c2ub启用随路Nz转ND格式功能时，配置格式转换所需的相关参数。
+- [asc_set_l0c2gm_quant_post](asc_set_l0c2gm_quant_post.md)：对QUANT_POST寄存器中的值进行设置, QUANT_POST是一个64bit的寄存器，存储Fixpipe后处理阶段量化信息。 其中各bit含义如下，其中各种量化模式的说明可见asc_copy_l0c2l1中对各种量化模式的说明：
+- [asc_set_l0c2gm_relu_alpha](asc_set_l0c2gm_relu_alpha.md)：对RELU_ALPHA寄存器中的值进行设置。这是一个64bit的寄存器，存储在fixpipe或cube指令中进行Scalar ReLU时使用的alpha值。
+- [asc_set_l0c_copy_channel_para](asc_set_l0c_copy_channel_para.md)：本接口用于在L0C Buffer搬出并执行Nz2DN格式转换时，配置源Nz矩阵中相邻行的地址偏移。配置写入后，由后续开启Nz2DN功能的asc_copy_l0c2gm、asc_copy_l0c2l1或asc_copy_l0c2ub接口使用；未开启Nz2DN功能时，本配置不生效。
+- [asc_set_l0c_copy_nz_para](asc_set_l0c_copy_nz_para.md)：本接口用于在L0C Buffer搬出接口asc_copy_l0c2gm、asc_copy_l0c2l1、asc_copy_l0c2ub启用随路Nz转ND/DN格式功能时，配置格式转换所需的相关参数。
+- [asc_set_l0c_copy_params](asc_set_l0c_copy_params.md)：DataCopy从L0C Buffer搬运到Global Memory或L1 Buffer过程中进行随路格式转换（NZ格式转换为ND格式）时，通过调用该接口设置格式转换的相关配置。
+- [asc_set_l0c_copy_prequant](asc_set_l0c_copy_prequant.md)：本接口用于在L0C Buffer搬出过程中进行随路Scalar量化时，配置量化计算所需的缩放系数、偏移量和量化结果符号。配置完成后，由后续调用的asc_copy_l0c2gm、asc_copy_l0c2l1或asc_copy_l0c2ub接口使用，并且需要与搬出接口的quant_pre_mode搭配使用。
+- [asc_set_l12l0_padding_val](asc_set_l12l0_padding_val.md)：对PADDING_B寄存器中的值进行设置，这是一个64bit的寄存器，用于存储搬运过程中padding的值。 其中各bit含义如下：
+- [asc_set_l12l0a_3d_padding](asc_set_l12l0a_3d_padding.md)：用于调用asc_copy_l12l0a_arch_3510（3D矩阵搬运）时设置3D格式分形矩阵搬运（im2col展开）搬运指令使用的填充值。asc_copy_l12l0a接口中的f_matrix_ctrl参数设置为false时，3D格式分形矩阵搬运（im2col展开）场景会使用本接口设置的值做为填充值。
+- [asc_set_l13d_fmatrix](asc_set_l13d_fmatrix.md)：设置Feature map属性描述，用于在调用asc_copy_l12l0a/asc_copy_l12l0b的3D格式搬运接口时配置填充数值。 仅当asc_copy_l12l0a/asc_copy_l12l0b接口的f_matrix_ctrl参数指示从左矩阵获取FeatureMap的属性时使用本接口设置Feature map属性描述，否则使用asc_set_l13d_fmatrix_b接口。
+- [asc_set_l13d_fmatrix_b](asc_set_l13d_fmatrix_b.md)：设置Feature map属性描述，用于在调用asc_copy_l12l0a/asc_copy_l12l0b的3D格式搬运接口时配置填充数值。 仅当asc_copy_l12l0a/asc_copy_l12l0b接口的f_matrix_ctrl参数指示从右矩阵获取FeatureMap的属性时使用本接口设置Feature map属性描述，否则使用asc_set_l13d_fmatrix接口。
+- [asc_set_l13d_padding](asc_set_l13d_padding.md)：设置Pad属性描述，用于在调用asc_copy_l12l0a接口时配置填充数值。
+- [asc_set_l13d_rpt](asc_set_l13d_rpt.md)：用于设置Load3Dv2接口的repeat参数。
+- [asc_set_l13d_size](asc_set_l13d_size.md)：设置asc_copy_l12l0a/asc_copy_l12l0b的3D格式搬运接口在L1 Buffer的边界值。
+- [asc_set_l3d_rpt_b](asc_set_l3d_rpt_b.md)：用于设置接口asc_copy_l12l0a、asc_copy_l12l0b的2D格式搬运的repeat参数。
+
+- [asc_set_gm2l1_padding](asc_set_gm2l1_padding.md)：头文件路径为："c_api/cube_datamove/cube_datamove.h"。
+- [asc_set_l0c_copy_config](asc_set_l0c_copy_config.md)：头文件路径为："c_api/cube_datamove/cube_datamove.h"。
+- [asc_set_l0c_copy_lrelu_alpha](asc_set_l0c_copy_lrelu_alpha.md)：头文件路径为："c_api/cube_datamove/cube_datamove.h"。
+- [asc_set_l0c_copy_relu_alpha](asc_set_l0c_copy_relu_alpha.md)：头文件路径为："c_api/cube_datamove/cube_datamove.h"。
+- [asc_set_l12l0b_3d_padding](asc_set_l12l0b_3d_padding.md)：头文件路径为："c_api/cube_datamove/cube_datamove.h"。
+- [asc_set_l13d_rpt_b](asc_set_l13d_rpt_b.md)：头文件路径为："c_api/cube_datamove/cube_datamove.h"。

@@ -1,0 +1,8 @@
+{
+  "verified_source_text_files": 9774,
+  "included_files_before_audit": 10016,
+  "source_text_hashes_match": true,
+  "upstream_scripts_executed": false,
+  "private_project_material_included": false,
+  "prebuilt_index_included": true
+}

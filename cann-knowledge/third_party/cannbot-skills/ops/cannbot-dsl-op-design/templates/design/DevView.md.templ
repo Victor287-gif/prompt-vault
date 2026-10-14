@@ -1,0 +1,67 @@
+# 开发视图
+
+## 交付职责
+
+按实际交付布局列对象职责，覆盖公开入口、调度、计算、独立参考结果及验证。共享配置、持有资源和释放位置与设计契约一致。
+
+| 文件或对象 | 职责及拥有者 | 输入与输出 | 生命周期 | 对应设计 |
+|---|---|---|---|---|
+| | | | | |
+
+## 调用与数据流
+
+从调用者、信息准备、配置选择、执行阶段到结果返回画流程图。边上标明参数、数据与资源的传递，跨阶段完成条件单独标注。
+
+## 共享逻辑与路径
+
+| 对象或阶段 | 共享定义 | 路径差异 | 对应分支及验证 |
+|---|---|---|---|
+| | | | |
+
+与 TemplatePartition.md 一一对应。运行、重复调用或导出契约有要求时，说明共享配置、产物和资源的拥有者及有效范围。
+
+## 开发与验证入口
+
+说明各职责的开发顺序与依赖、如何取得独立参考结果、运行路径用例和采集证据。关键能力待验证时给验证任务与通过条件。
+
+## 文件与调用链参考示例
+
+以下保留一种代码组织及调用链的表达方式，实际文件和对象由上述职责映射确定。
+
+```text
+<算子目录>/
+  <公开入口与 DSL 实现文件>
+  <独立 Golden 与测试文件>
+```
+
+```mermaid
+flowchart LR
+    Caller[调用者] --> Entry[公开入口]
+    Entry --> Factory[DSL 显式编译]
+    Factory --> Program[ProviderCallable]
+    Program --> Launcher[host 入口]
+    Launcher --> Kernel[DSL Kernel]
+    Kernel --> Output[输出]
+```
+
+## 参考示例：两种代码组织
+
+`flash_attn.py` 将配置/资源计划、Launcher、Kernel 阶段对象放在同一 Python 模块；`flash_kda.py` 还包含编译规格构造、公共 Host 包装和可选的图执行注册。下面只表达职责，不要求生成这些目录或注册接口：
+
+```text
+公开函数
+  ├─ 输入元数据校验与输出/Workspace 分配
+  ├─ 配置选择 + ResourcePlan（适用时）
+  ├─ 显式构建 → cannbotdsl.compile(@host 入口, specs...)
+  ├─ ProviderCallable(本次 Tensor 与运行时参数)
+  │    └─ Program.run @host
+  │         └─ @kernel __call__: block→task→tile
+  │              ├─ CopyIn: GM→Channel/Buffer
+  │              ├─ Compute: @jit 阶段 / 可选 VF、matmul
+  │              └─ CopyOut: Channel/Buffer→GM
+  └─ 返回输出
+
+独立 Golden / 黑盒、白盒、结构测试 → 只通过公开函数观察行为
+```
+
+该示例表达配置、构建、调度和计算的职责映射，具体对象由交付表确定。调用与导出路径存在时，说明配置共享、产物拥有者与释放位置；图注册及辅助记录按实际契约展开。

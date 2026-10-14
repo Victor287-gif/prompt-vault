@@ -1,0 +1,58 @@
+# Elementwise · unary 优化经验
+
+## 知识卡
+
+- [reciprocal：并行优化](reciprocal_optimization_a2.md)：reciprocal 算子的并行优化经验，关注标量开销。
+- [clip_by_value_v2：循环计算优化](clip_by_value_v2_loop_compute_compute_a2_id_0.md)：clip_by_value_v2 算子的循环计算优化经验，关注流水线停顿。
+- [clip_by_value_v2：循环计算优化](clip_by_value_v2_loop_compute_compute_a2_id_1.md)：clip_by_value_v2 算子的循环计算优化经验，关注流水线停顿。
+- [arange：Tiling优化](arange_tiling_a2.md)：arange 算子的Tiling优化经验，关注混合或尚未确定的瓶颈。
+- [arange：内存优化](arange_memory_a2.md)：arange 算子的内存优化经验，关注流水线停顿。
+- [gelu：流水与内存优化](gelu_pipeline_memory_a2.md)：gelu 算子的流水与内存优化经验，关注标量开销。
+- [clip_by_value_v2：内存优化](clip_by_value_v2_memory_a2.md)：clip_by_value_v2 算子的内存优化经验，关注流水线停顿。
+- [mul_sigmoid：计算优化](mul_sigmoid_compute_a2.md)：mul_sigmoid 算子的计算优化经验，关注标量开销。
+- [eye：内存优化](eye_memory_a2_id_0.md)：eye 算子的内存优化经验，关注混合或尚未确定的瓶颈。
+- [mul_sigmoid：冗余消除优化](mul_sigmoid_optimization_a2_id_0.md)：mul_sigmoid 算子的冗余消除优化经验，关注标量开销。
+- [rsqrt：流水优化](rsqrt_pipeline_a2.md)：rsqrt 算子的流水优化经验，关注标量开销。
+- [rsqrt：冗余消除优化](rsqrt_optimization_a2_id_0.md)：rsqrt 算子的冗余消除优化经验，关注标量开销。
+- [swish：内存与 Tiling优化](swish_memory_tiling_tiling_memory_a2.md)：swish 算子的内存与 Tiling优化经验，关注混合或尚未确定的瓶颈。
+- [eye：循环计算优化](eye_loop_compute_compute_a2.md)：eye 算子的循环计算优化经验，关注混合或尚未确定的瓶颈。
+- [rsqrt：流水与内存优化](rsqrt_pipeline_memory_a2.md)：rsqrt 算子的流水与内存优化经验，关注标量开销。
+- [clip_by_value_v2：循环计算优化](clip_by_value_v2_loop_compute_compute_a2_id_2.md)：clip_by_value_v2 算子的循环计算优化经验，关注内存带宽。
+- [clip_by_value_v2：循环计算优化](clip_by_value_v2_loop_compute_compute_a2_id_3.md)：clip_by_value_v2 算子的循环计算优化经验，关注流水线停顿。
+- [mul_sigmoid：冗余消除优化](mul_sigmoid_optimization_a2_id_1.md)：mul_sigmoid 算子的冗余消除优化经验，关注标量开销。
+- [eye：搬运与内存优化](eye_memory_a2_id_1.md)：eye 算子的搬运与内存优化经验，关注数据搬运。
+- [clip_by_value_v2：循环计算优化](clip_by_value_v2_loop_compute_compute_a2_id_4.md)：clip_by_value_v2 算子的循环计算优化经验，关注流水线停顿。
+- [reciprocal：数据搬运优化](reciprocal_data_movement_a2.md)：reciprocal 算子的数据搬运优化经验，关注流水线停顿。
+- [cast：向量化计算优化](cast_vectorization_compute_a2.md)：cast 算子的向量化计算优化经验，关注流水线停顿。
+- [eye：内存优化](eye_memory_a2_id_2.md)：eye 算子的内存优化经验，关注GM 访存。
+- [eye：内存与 Tiling优化](eye_memory_tiling_tiling_memory_a2.md)：eye 算子的内存与 Tiling优化经验，关注Kernel 启动开销。
+- [trunc：Tiling优化](trunc_tiling_a2.md)：trunc 算子的Tiling优化经验，关注流水线停顿。
+- [gelu：流水与并行优化](gelu_pipeline_parallel_pipeline_a2.md)：gelu 算子的流水与并行优化经验，关注标量开销。
+- [lin_space：数据搬运优化](lin_space_data_movement_a2.md)：lin_space 算子的数据搬运优化经验，关注流水线停顿。
+- [gelu：计算优化](gelu_compute_a2.md)：gelu 算子的计算优化经验，关注标量开销。
+- [cast：控制流计算优化](cast_compute_a2.md)：cast 算子的控制流计算优化经验，关注流水线停顿。
+- [eye：内存优化](eye_memory_a2_id_3.md)：eye 算子的内存优化经验，关注标量开销。
+- [rsqrt：Tiling优化](rsqrt_tiling_a2.md)：rsqrt 算子的Tiling优化经验，关注混合或尚未确定的瓶颈。
+- [fill：循环计算优化](fill_loop_compute_compute_a2.md)：fill 算子的循环计算优化经验，关注流水线停顿。
+- [cast：循环计算优化](cast_loop_compute_compute_a2.md)：cast 算子的循环计算优化经验，关注流水线停顿。
+- [cos：并行切核优化](cos_parallel_kernel_a2.md)：cos 算子的并行切核优化经验，关注流水线停顿。
+- [arange：向量化计算优化](arange_vectorization_compute_a2.md)：arange 算子的向量化计算优化经验，关注流水线停顿。
+- [fill：向量化计算优化](fill_vectorization_compute_a2.md)：fill 算子的向量化计算优化经验，关注流水线停顿。
+- [mul_sigmoid：冗余消除优化](mul_sigmoid_optimization_a2_id_2.md)：mul_sigmoid 算子的冗余消除优化经验，关注标量开销。
+- [gelu：内存优化](gelu_memory_a2.md)：gelu 算子的内存优化经验，关注缓冲区利用率。
+- [swish：流水与内存优化](swish_pipeline_memory_a2.md)：swish 算子的流水与内存优化经验，关注标量开销。
+- [clip_by_value_v2：循环计算优化](clip_by_value_v2_loop_compute_compute_a2_id_5.md)：clip_by_value_v2 算子的循环计算优化经验，关注流水线停顿。
+- [fill：内存优化](fill_memory_a2.md)：fill 算子的内存优化经验，关注流水线停顿。
+- [rsqrt：冗余消除优化](rsqrt_optimization_a2_id_1.md)：rsqrt 算子的冗余消除优化经验，关注标量开销。
+- [cos：计算优化](cos_compute_a2.md)：cos 算子的计算优化经验，关注混合或尚未确定的瓶颈。
+- [rsqrt：冗余消除优化](rsqrt_optimization_a2_id_2.md)：rsqrt 算子的冗余消除优化经验，关注标量开销。
+- [mul_sigmoid：冗余消除优化](mul_sigmoid_optimization_a2_id_3.md)：mul_sigmoid 算子的冗余消除优化经验，关注标量开销。
+- [rsqrt：数据搬运优化](rsqrt_data_movement_a2.md)：rsqrt 算子的数据搬运优化经验，关注标量开销。
+- [fill：计算优化](fill_compute_a2.md)：fill 算子的计算优化经验，关注流水线停顿。
+- [rsqrt：冗余消除优化](rsqrt_optimization_a2_id_3.md)：rsqrt 算子的冗余消除优化经验，关注标量开销。
+- [clip_by_value_v2：向量化计算优化](clip_by_value_v2_vectorization_compute_a2.md)：clip_by_value_v2 算子的向量化计算优化经验，关注流水线停顿。
+- [clip_by_value_v2：循环计算优化](clip_by_value_v2_loop_compute_compute_a2_id_6.md)：clip_by_value_v2 算子的循环计算优化经验，关注流水线停顿。
+- [reciprocal：循环计算优化](reciprocal_loop_compute_compute_a2.md)：reciprocal 算子的循环计算优化经验，关注流水线停顿。
+- [mul_sigmoid：冗余消除优化](mul_sigmoid_optimization_a2_id_4.md)：mul_sigmoid 算子的冗余消除优化经验，关注标量开销。
+- [eye：搬运与内存优化](eye_memory_a2_id_4.md)：eye 算子的搬运与内存优化经验，关注内存带宽。
+- [reciprocal：计算优化](reciprocal_compute_a2.md)：reciprocal 算子的计算优化经验，关注标量开销。

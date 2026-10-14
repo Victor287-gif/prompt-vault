@@ -1,0 +1,63 @@
+{
+  "cpu_only": true,
+  "npu_experiments": false,
+  "store": [
+    {
+      "query": "matmul pingpong",
+      "topic": "matmul",
+      "first_result": "cannbot-skills/ops/ascendc-performance-best-practices/references/matmul/pingpong_design.md",
+      "pass": true
+    },
+    {
+      "query": "标量 scalar",
+      "topic": "sync-scalar",
+      "first_result": "cannbot-knowledge/knowledge/ops/triton/optimizations/operator_optimization/scalar_to_vector.md",
+      "pass": true
+    },
+    {
+      "query": "同步 SetFlag WaitFlag",
+      "topic": "sync-scalar",
+      "first_result": "cannbot-knowledge/knowledge/ops/triton/apis/ir/hivm/sync_block_sync.md",
+      "pass": true
+    },
+    {
+      "query": "msprof",
+      "topic": "profiling-debug",
+      "first_result": "cannbot-skills/ops/ops-profiling/msopprof-visualization/scripts/environment_context.py",
+      "pass": true
+    },
+    {
+      "query": "L1 常驻",
+      "topic": "pipeline-memory",
+      "first_result": "cannbot-knowledge/knowledge/ops/ascendc/guides/memory/resident_data_and_state_budget.md",
+      "pass": true
+    },
+    {
+      "query": "归约 reduce",
+      "topic": "reduction-broadcast",
+      "first_result": "cannbot-skills/community/ops/ascendc-evolution-strategies/references/families/reduction_guide.md",
+      "pass": true
+    },
+    {
+      "test": "input_bounds_and_path_confinement",
+      "pass": true
+    },
+    {
+      "test": "runtime_index_unchanged",
+      "pass": true
+    }
+  ],
+  "stdio_tools": [
+    "cann_get_catalog",
+    "cann_list_knowledge",
+    "cann_read_knowledge",
+    "cann_search_knowledge"
+  ],
+  "http_tools": [
+    "cann_get_catalog",
+    "cann_list_knowledge",
+    "cann_read_knowledge",
+    "cann_search_knowledge"
+  ],
+  "all_passed": true
+}

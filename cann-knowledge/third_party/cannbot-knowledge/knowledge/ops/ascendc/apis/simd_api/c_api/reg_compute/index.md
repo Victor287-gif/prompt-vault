@@ -1,0 +1,21 @@
+# Reg矢量计算
+
+- [Reg数据搬入](load/index.md)：共 27 张知识卡（如 asc_load、asc_loadalign、asc_loadalign_brc_datablock 等）。
+- [地址寄存器操作](reg_addr_reg/index.md)：更新地址寄存器（addr_reg），用于迭代寻址。支持1~4维偏移量设置，位宽支持b8、b16、b32三种模式：
+- [基础算术](reg_arith/index.md)：共 19 张知识卡（如 asc_abs、asc_add、asc_add_scalar 等）。
+- [广播操作](reg_broadcast/index.md)：共 6 张知识卡（如 asc_duplicate、asc_duplicate_highest、asc_duplicate_highest_merge 等）。
+- [比较计算](reg_compare/index.md)：共 12 张知识卡（如 asc_eq、asc_eq_scalar、asc_ge 等）。
+- [类型转换](reg_convert/index.md)：共 55 张知识卡（如 asc_bfloat162e1m2x2、asc_bfloat162e2m1x2、asc_bfloat162float 等）。
+- [Reg间搬运](reg_copy/index.md)：共 3 张知识卡（如 asc_copy、asc_extract_mask、asc_mask）。
+- [复合计算](reg_fused/index.md)：共 10 张知识卡（如 asc_abs_sub、asc_axpy、asc_exp_sub 等）。
+- [reg gather](reg_gather/index.md)：根据索引位置index将源操作数src按元素收集到目的操作数dst中。
+- [直方图](reg_histogram/index.md)：共 2 张知识卡（如 asc_cumulative_histogram、asc_frequency_histogram）。
+- [索引操作](reg_index/index.md)：以传入的value为起始值，生成递增/递减的索引，并将生成的索引保存在dst中，Vector Length (VL)表示矢量数据寄存器的位宽，VL_T表示该寄存器可存储的元素数量。算法逻辑表示如下：
+- [逻辑计算](reg_logic/index.md)：共 8 张知识卡（如 asc_and、asc_not、asc_or 等）。
+- [掩码寄存器操作](reg_mask/index.md)：共 3 张知识卡（如 asc_create_mask、asc_get_mask_spr、asc_update_mask）。
+- [排布变换](reg_permute_sel/index.md)：共 11 张知识卡（如 asc_deintlv、asc_intlv、asc_pack_to_high 等）。
+- [归约计算](reg_reduce/index.md)：共 7 张知识卡（如 asc_pair_reduce_sum、asc_reduce_max、asc_reduce_max_datablock 等）。
+- [同步控制](reg_sync/index.md)：Reg矢量计算内不同流水线之间的同步指令。该同步指令指定源流水线和目的流水线，如下图所示，目的流水线将等待源流水线上所有指令完成才进行执行。 读写场景下，当读指令使用的寄存器和写指令使用的寄存器相同时，可以触发寄存器保序，指令将会按照代码顺序执行，不需要插入同步指令，而当使用的寄存器不同时，如果要确保读写指令执行，则需要插入同步指令。写写场景同理。
+- [Reg离散搬出](scatter/index.md)：根据索引寄存器中的索引值，将源矢量数据寄存器中的元素分散搬出到Unified Buffer（UB）。mask用于指示参与搬出的元素，掩码为1的源元素写入dst中对应索引位置，掩码为0的源元素不写入目的地址，保留目的地址原数据。搬运过程中数据格式与内容保持不变。本接口在Vector Function（__simd_vf__标记的函数）内使用。
+- [Reg数据搬出](store/index.md)：共 17 张知识卡（如 asc_store、asc_storealign、asc_storealign_1st 等）。
+- [ub gather](ub_gather/index.md)：共 2 张知识卡（如 asc_gather、asc_gather_datablock）。

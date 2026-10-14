@@ -1,0 +1,1642 @@
+[
+  {
+    "source": "cannbot-skills",
+    "path": "community/ops/tilelang2ascend-operator-project-init/templates/ascend-kernel/tests/test_avg_pool3d.py",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/aiss-tiling-solver/evals/evals.json",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/ascendc-api-best-practices/evals/evals.json",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/ascendc-blaze-best-practice/evals/evals.json",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/ascendc-blaze-migration/evals/evals.json",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/ascendc-code-review/evals/evals.json",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/ascendc-code-review/evals/reviewer_bench/.gitignore",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/ascendc-code-review/evals/reviewer_bench/README.md",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/ascendc-code-review/evals/reviewer_bench/benchmark_tasks/L1-human-supervised-review-task/10_ops-transformer_pr_0086_f23d73dcb38d.md",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/ascendc-code-review/evals/reviewer_bench/benchmark_tasks/L1-human-supervised-review-task/10_ops-transformer_pr_6534_d9c273b6874a.md",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/ascendc-code-review/evals/reviewer_bench/benchmark_tasks/L1-human-supervised-review-task/11_ops-transformer_pr_3212_a4b5f51e11d6.md",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/ascendc-code-review/evals/reviewer_bench/benchmark_tasks/L1-human-supervised-review-task/11_ops-transformer_pr_4046_a7d38ff5fc6b.md",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/ascendc-code-review/evals/reviewer_bench/benchmark_tasks/L1-human-supervised-review-task/12_ops-transformer_pr_5399_4f464341248e.md",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/ascendc-code-review/evals/reviewer_bench/benchmark_tasks/L1-human-supervised-review-task/16_ops-transformer_pr_3540_47af43bc865d.md",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/ascendc-code-review/evals/reviewer_bench/benchmark_tasks/L1-human-supervised-review-task/16_ops-transformer_pr_4099_b68e9745d63a.md",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/ascendc-code-review/evals/reviewer_bench/benchmark_tasks/L1-human-supervised-review-task/30_ops-transformer_pr_4699_95d1c3fc8fd3.md",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/ascendc-code-review/evals/reviewer_bench/benchmark_tasks/L1-human-supervised-review-task/54_ops-transformer_pr_4699_bb229a6b2a2a.md",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/ascendc-code-review/evals/reviewer_bench/benchmark_tasks/L2-human-supervised-review-tasks/11_ops-transformer_pr_4046_a7d38ff5fc6b.md",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/ascendc-code-review/evals/reviewer_bench/benchmark_tasks/top20_redline_and_topk_filtered/10_ops-math_pr_1633_0e69ae4cea00.md",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/ascendc-code-review/evals/reviewer_bench/benchmark_tasks/top20_redline_and_topk_filtered/12_ops-transformer_pr_4099_b68e9745d63a.md",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/ascendc-code-review/evals/reviewer_bench/benchmark_tasks/top20_redline_and_topk_filtered/4_ops-math_pr_0093_b2186a35d3a2.md",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/ascendc-code-review/evals/reviewer_bench/benchmark_tasks/top20_redline_and_topk_filtered/4_ops-math_pr_0322_8b80dc338867.md",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/ascendc-code-review/evals/reviewer_bench/benchmark_tasks/top20_redline_and_topk_filtered/4_ops-math_pr_0387_a2cf90504988.md",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/ascendc-code-review/evals/reviewer_bench/benchmark_tasks/top20_redline_and_topk_filtered/4_ops-math_pr_2289_2ea2255cc687.md",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/ascendc-code-review/evals/reviewer_bench/benchmark_tasks/top20_redline_and_topk_filtered/4_ops-math_pr_2469_f1c97084b910.md",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/ascendc-code-review/evals/reviewer_bench/benchmark_tasks/top20_redline_and_topk_filtered/5_ops-transformer_pr_5767_39a53aa25b2e.md",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/ascendc-code-review/evals/reviewer_bench/benchmark_tasks/top20_redline_and_topk_filtered/5_ops-transformer_pr_6353_9f796b34565c.md",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/ascendc-code-review/evals/reviewer_bench/benchmark_tasks/top20_redline_and_topk_filtered/6_ops-nn_pr_5428_c4b9642c1c81.md",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/ascendc-code-review/evals/reviewer_bench/benchmark_tasks/top20_redline_and_topk_filtered/6_ops-transformer_pr_2648_6b31281b8249.md",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/ascendc-code-review/evals/reviewer_bench/benchmark_tasks/top20_redline_and_topk_filtered/7_ops-math_pr_2652_98750b2381a0.md",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/ascendc-code-review/evals/reviewer_bench/benchmark_tasks/top20_redline_and_topk_filtered/7_ops-transformer_pr_1193_5469207233ec.md",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/ascendc-code-review/evals/reviewer_bench/benchmark_tasks/top20_redline_and_topk_filtered/9_ops-math_pr_1505_14f1acd94907.md",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/ascendc-code-review/evals/reviewer_bench/benchmark_tasks/top20_redline_and_topk_filtered/9_ops-math_pr_2365_0b2d97d72ee0.md",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/ascendc-code-review/evals/reviewer_bench/benchmark_tasks/top20_redline_and_topk_filtered/9_ops-nn_pr_5303_699057d3ebc7.md",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/ascendc-code-review/evals/reviewer_bench/docs/design/code-review-architecture.md",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/ascendc-code-review/evals/reviewer_bench/docs/子agent监控.md",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/ascendc-code-review/evals/reviewer_bench/history_real_comment/clean/ops-cv.jsonl",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/ascendc-code-review/evals/reviewer_bench/history_real_comment/clean/ops-math.jsonl",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/ascendc-code-review/evals/reviewer_bench/history_real_comment/clean/ops-nn.jsonl",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/ascendc-code-review/evals/reviewer_bench/history_real_comment/clean/ops-transformer.jsonl",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/ascendc-code-review/evals/reviewer_bench/history_real_comment/raw/ops-cv.jsonl",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/ascendc-code-review/evals/reviewer_bench/history_real_comment/raw/ops-math.jsonl",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/ascendc-code-review/evals/reviewer_bench/history_real_comment/raw/ops-nn.jsonl",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/ascendc-code-review/evals/reviewer_bench/history_real_comment/raw/ops-transformer.jsonl",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/ascendc-code-review/evals/reviewer_bench/history_real_comment/refined/ops-cv.jsonl",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/ascendc-code-review/evals/reviewer_bench/history_real_comment/refined/ops-math.jsonl",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/ascendc-code-review/evals/reviewer_bench/history_real_comment/refined/ops-nn.jsonl",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/ascendc-code-review/evals/reviewer_bench/history_real_comment/refined/ops-transformer.jsonl",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/ascendc-code-review/evals/reviewer_bench/prompts/clean_dataset_prompt.md",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/ascendc-code-review/evals/reviewer_bench/prompts/eval_prompt.md",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/ascendc-code-review/evals/reviewer_bench/prompts/gen_benchmark_by_type_prompt.md",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/ascendc-code-review/evals/reviewer_bench/prompts/review_prompt.md",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/ascendc-code-review/evals/reviewer_bench/pyproject.toml",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/ascendc-code-review/evals/reviewer_bench/scripts/clean_dataset.py",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/ascendc-code-review/evals/reviewer_bench/scripts/deterministic_routing.py",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/ascendc-code-review/evals/reviewer_bench/scripts/fetch_review_comments.py",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/ascendc-code-review/evals/reviewer_bench/scripts/gen_bench_config.py",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/ascendc-code-review/evals/reviewer_bench/scripts/gen_eval_config.py",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/ascendc-code-review/evals/reviewer_bench/scripts/gen_ground_truth.py",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/ascendc-code-review/evals/reviewer_bench/scripts/gen_leaderboard.py",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/ascendc-code-review/evals/reviewer_bench/scripts/gen_proposer_sample.py",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/ascendc-code-review/evals/reviewer_bench/scripts/normalize_report.py",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/ascendc-code-review/evals/reviewer_bench/scripts/prepare_bench_data.py",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/ascendc-code-review/evals/reviewer_bench/scripts/quick_prepare_redline.py",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/ascendc-code-review/evals/reviewer_bench/scripts/refine_dataset.py",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/ascendc-code-review/evals/reviewer_bench/scripts/restore_pr_repo.py",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/ascendc-code-review/evals/reviewer_bench/scripts/run_eval.py",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/ascendc-code-review/evals/reviewer_bench/src/batch_review/README.md",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/ascendc-code-review/evals/reviewer_bench/src/batch_review/__init__.py",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/ascendc-code-review/evals/reviewer_bench/src/batch_review/__main__.py",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/ascendc-code-review/evals/reviewer_bench/src/batch_review/config.py",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/ascendc-code-review/evals/reviewer_bench/src/batch_review/pr_list.txt",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/ascendc-code-review/evals/reviewer_bench/src/batch_review/process.py",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/ascendc-code-review/evals/reviewer_bench/src/batch_review/prompt.py",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/ascendc-code-review/evals/reviewer_bench/src/batch_review/review-config.json",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/ascendc-code-review/evals/reviewer_bench/src/batch_review/review_config_claude.json",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/ascendc-code-review/evals/reviewer_bench/src/batch_review/scheduler.py",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/ascendc-code-review/evals/reviewer_bench/src/batch_review/state.py",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/ascendc-code-review/evals/reviewer_bench/src/batch_review/timeout.py",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/ascendc-code-review/scripts/tests/conftest.py",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/ascendc-code-review/scripts/tests/test_check_bounds.py",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/ascendc-crash-debug/evals/evals.json",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/ascendc-cross-gen-migration/evals/evals.json",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/ascendc-direct-invoke-template/evals/evals.json",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/ascendc-direct-invoke-to-registry-invoke/evals/evals.json",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/ascendc-docs-gen/evals/evals.json",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/ascendc-docs-search/evals/evals.json",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/ascendc-env-check/evals/evals.json",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/ascendc-mc2-best-practice/evals/evals.json",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/ascendc-mc2-best-practice/references/foundations/ascendc-api/moe-dispatch-combine/samples/moe_dispatch_direct_invoke_sample/test/test_moe_dispatch.cpp",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/ascendc-perf-optimize/evals/evals.json",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/ascendc-performance-best-practices/evals/evals.json",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/ascendc-precision-debug/evals/evals.json",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/ascendc-regbase-best-practice/evals/evals.json",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/ascendc-regbase-best-practice/references/paradigms/broadcast/example/xdivy_custom_package/tests/aclnn/CMakeLists.txt",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/ascendc-regbase-best-practice/references/paradigms/broadcast/example/xdivy_custom_package/tests/aclnn/run.sh",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/ascendc-regbase-best-practice/references/paradigms/broadcast/example/xdivy_custom_package/tests/aclnn/test_aclnn.cpp",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/ascendc-regbase-best-practice/references/paradigms/broadcast/example/xdivy_custom_package/tests/geir/CMakeLists.txt",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/ascendc-regbase-best-practice/references/paradigms/broadcast/example/xdivy_custom_package/tests/geir/run.sh",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/ascendc-regbase-best-practice/references/paradigms/broadcast/example/xdivy_custom_package/tests/geir/test_geir.cpp",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/ascendc-regbase-best-practice/references/paradigms/broadcast/example/xdivy_custom_package/tests/tiling/CMakeLists.txt",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/ascendc-regbase-best-practice/references/paradigms/broadcast/example/xdivy_custom_package/tests/tiling/run.sh",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/ascendc-regbase-best-practice/references/paradigms/broadcast/example/xdivy_custom_package/tests/tiling/test_tiling.cpp",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/ascendc-regbase-best-practice/references/paradigms/reduction/example/euclidean_norm_package/tests/aclnn/CMakeLists.txt",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/ascendc-regbase-best-practice/references/paradigms/reduction/example/euclidean_norm_package/tests/aclnn/run.sh",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/ascendc-regbase-best-practice/references/paradigms/reduction/example/euclidean_norm_package/tests/aclnn/test_aclnn.cpp",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/ascendc-regbase-best-practice/references/paradigms/reduction/example/euclidean_norm_package/tests/geir/CMakeLists.txt",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/ascendc-regbase-best-practice/references/paradigms/reduction/example/euclidean_norm_package/tests/geir/run.sh",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/ascendc-regbase-best-practice/references/paradigms/reduction/example/euclidean_norm_package/tests/geir/test_geir.cpp",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/ascendc-regbase-best-practice/references/paradigms/reduction/example/euclidean_norm_package/tests/tiling/CMakeLists.txt",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/ascendc-regbase-best-practice/references/paradigms/reduction/example/euclidean_norm_package/tests/tiling/run.sh",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/ascendc-regbase-best-practice/references/paradigms/reduction/example/euclidean_norm_package/tests/tiling/test_tiling.cpp",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/ascendc-registry-invoke-template/evals/evals.json",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/ascendc-registry-invoke-template/references/add_example/tests/st/CMakeLists.txt",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/ascendc-registry-invoke-template/references/add_example/tests/st/README.md",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/ascendc-registry-invoke-template/references/add_example/tests/st/run.sh",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/ascendc-registry-invoke-template/references/add_example/tests/st/test_aclnn_add_example.cpp",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/ascendc-registry-invoke-template/references/add_example/tests/st/torch/CMakeLists.txt",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/ascendc-registry-invoke-template/references/add_example/tests/st/torch/compare.py",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/ascendc-registry-invoke-template/references/add_example/tests/st/torch/golden.py",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/ascendc-registry-invoke-template/references/add_example/tests/st/torch/test.py",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/ascendc-registry-invoke-template/references/add_example/tests/st/torch/torch_adapter.cpp",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/ascendc-registry-invoke-template/references/add_example/tests/ut/CMakeLists.txt",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/ascendc-registry-invoke-template/references/add_example/tests/ut/README.md",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/ascendc-registry-invoke-template/references/add_example/tests/ut/cmake/BuildGoogleTest.cmake",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/ascendc-registry-invoke-template/references/add_example/tests/ut/common/any_value.h",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/ascendc-registry-invoke-template/references/add_example/tests/ut/common/infershape_case_executor.cpp",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/ascendc-registry-invoke-template/references/add_example/tests/ut/common/infershape_case_executor.h",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/ascendc-registry-invoke-template/references/add_example/tests/ut/common/infershape_context_faker.cpp",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/ascendc-registry-invoke-template/references/add_example/tests/ut/common/infershape_context_faker.h",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/ascendc-registry-invoke-template/references/add_example/tests/ut/common/tiling_case_executor.cpp",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/ascendc-registry-invoke-template/references/add_example/tests/ut/common/tiling_case_executor.h",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/ascendc-registry-invoke-template/references/add_example/tests/ut/common/tiling_context_faker.cpp",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/ascendc-registry-invoke-template/references/add_example/tests/ut/common/tiling_context_faker.h",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/ascendc-registry-invoke-template/references/add_example/tests/ut/op_api/CMakeLists.txt",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/ascendc-registry-invoke-template/references/add_example/tests/ut/op_api/test_aclnn_add_example.cpp",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/ascendc-registry-invoke-template/references/add_example/tests/ut/op_api/test_add_example.cpp",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/ascendc-registry-invoke-template/references/add_example/tests/ut/op_api/test_op_api_main.cpp",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/ascendc-registry-invoke-template/references/add_example/tests/ut/op_api/test_utils.h",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/ascendc-registry-invoke-template/references/add_example/tests/ut/op_host/CMakeLists.txt",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/ascendc-registry-invoke-template/references/add_example/tests/ut/op_host/test_add_example_infershape.cpp",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/ascendc-registry-invoke-template/references/add_example/tests/ut/op_host/test_add_example_tiling.cpp",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/ascendc-registry-invoke-template/references/add_example/tests/ut/op_host/test_op_host_main.cpp",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/ascendc-registry-invoke-template/references/add_example/tests/ut/run.sh",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/ascendc-registry-invoke-template/references/matmul_blaze_example/tests/README.md",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/ascendc-registry-invoke-template/references/matmul_blaze_example/tests/st/CMakeLists.txt",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/ascendc-registry-invoke-template/references/matmul_blaze_example/tests/st/run.sh",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/ascendc-registry-invoke-template/references/matmul_blaze_example/tests/st/test_aclnn_matmul_blaze_example.cpp",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/ascendc-registry-invoke-to-direct-invoke/evals/evals.json",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/ascendc-runtime-debug/evals/evals.json",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/ascendc-simt-best-practices/evals/evals.json",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/ascendc-simt-tiling-design/evals/evals.json",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/ascendc-st-design/evals/evals.json",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/ascendc-sync-audit/evals/evals.json",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/ascendc-sync-audit/tests",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/ascendc-tiling-design/evals/evals.json",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/ascendc-ut-develop/evals/evals.json",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/ascendc-whitebox-design/evals/evals.json",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/cann-env-setup/evals/evals.json",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/cann-error-code-standard/evals/evals.json",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/cannbot-dsl-best-practice/evals/evals.json",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/cannbot-dsl-code-reviewer/evals/evals.json",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/cannbot-dsl-code-reviewer/evals/fixtures/readability.py",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/cannbot-dsl-env-check/evals/evals.json",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/cannbot-dsl-env-check/tests/test_env_report.py",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/cannbot-dsl-env-check/tests/test_shell_entry.py",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/cannbot-dsl-op-design/evals/evals.json",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/cannbot-dsl-test-generator/evals/evals.json",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/cannbot-dsl-test-generator/evals/fixtures/add-design.md",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/cannbot-dsl-test-generator/evals/fixtures/add-spec.yaml",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/cannbot-dsl-test-generator/tests/test_evidence_chain.py",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/cannbot-dsl-test-generator/tests/test_skills.py",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/cannbot-dsl-test-generator/tests/test_synthesize_dtype.py",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/cannbot-dsl-unit-planner/evals/evals.json",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/catlass-op-design/evals/evals.json",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/catlass-op-develop/evals/evals.json",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/catlass-op-perf-tune/evals/evals.json",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/npu-arch/evals/evals.json",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/ops-design-paradigms/evals/evals.json",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/ops-design-paradigms/references/paradigms/broadcast/adapters/ascendc/example/xdivy_custom_package/tests/aclnn/CMakeLists.txt",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/ops-design-paradigms/references/paradigms/broadcast/adapters/ascendc/example/xdivy_custom_package/tests/aclnn/run.sh",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/ops-design-paradigms/references/paradigms/broadcast/adapters/ascendc/example/xdivy_custom_package/tests/aclnn/test_aclnn.cpp",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/ops-design-paradigms/references/paradigms/broadcast/adapters/ascendc/example/xdivy_custom_package/tests/geir/CMakeLists.txt",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/ops-design-paradigms/references/paradigms/broadcast/adapters/ascendc/example/xdivy_custom_package/tests/geir/run.sh",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/ops-design-paradigms/references/paradigms/broadcast/adapters/ascendc/example/xdivy_custom_package/tests/geir/test_geir.cpp",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/ops-design-paradigms/references/paradigms/broadcast/adapters/ascendc/example/xdivy_custom_package/tests/tiling/CMakeLists.txt",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/ops-design-paradigms/references/paradigms/broadcast/adapters/ascendc/example/xdivy_custom_package/tests/tiling/run.sh",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/ops-design-paradigms/references/paradigms/broadcast/adapters/ascendc/example/xdivy_custom_package/tests/tiling/test_tiling.cpp",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/ops-design-paradigms/references/paradigms/reduction/adapters/ascendc/example/euclidean_norm_package/tests/aclnn/CMakeLists.txt",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/ops-design-paradigms/references/paradigms/reduction/adapters/ascendc/example/euclidean_norm_package/tests/aclnn/run.sh",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/ops-design-paradigms/references/paradigms/reduction/adapters/ascendc/example/euclidean_norm_package/tests/aclnn/test_aclnn.cpp",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/ops-design-paradigms/references/paradigms/reduction/adapters/ascendc/example/euclidean_norm_package/tests/geir/CMakeLists.txt",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/ops-design-paradigms/references/paradigms/reduction/adapters/ascendc/example/euclidean_norm_package/tests/geir/run.sh",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/ops-design-paradigms/references/paradigms/reduction/adapters/ascendc/example/euclidean_norm_package/tests/geir/test_geir.cpp",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/ops-design-paradigms/references/paradigms/reduction/adapters/ascendc/example/euclidean_norm_package/tests/tiling/CMakeLists.txt",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/ops-design-paradigms/references/paradigms/reduction/adapters/ascendc/example/euclidean_norm_package/tests/tiling/run.sh",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/ops-design-paradigms/references/paradigms/reduction/adapters/ascendc/example/euclidean_norm_package/tests/tiling/test_tiling.cpp",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/ops-design-paradigms/tests/test_language_route.py",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/ops-error-code-remediation/evals/evals.json",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/ops-precision-standard/evals/evals.json",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/ops-profiling/evals/evals.json",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/ops-profiling/msopprof-visualization/evals/evals.json",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/ops-simulator/evals/evals.json",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/ops-spec-gen/evals/evals.json",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/ops-spec-gen/tests/conftest.py",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/ops-spec-gen/tests/test_attr_resolve.py",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/ops-spec-gen/tests/test_broadcast.py",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/ops-spec-gen/tests/test_doc_drift.py",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/ops-spec-gen/tests/test_dtype_eval.py",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/ops-spec-gen/tests/test_examples.py",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/ops-spec-gen/tests/test_extreme_inputs_check.py",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/ops-spec-gen/tests/test_formula_eval.py",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/ops-spec-gen/tests/test_formula_oracle_equiv.py",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/ops-spec-gen/tests/test_generate_spec.py",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/ops-spec-gen/tests/test_invariant_exec.py",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/ops-spec-gen/tests/test_main_pipeline.py",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/ops-spec-gen/tests/test_oracle.py",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/ops-spec-gen/tests/test_promote.py",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/ops-spec-gen/tests/test_registry_schema_sync.py",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/ops-spec-gen/tests/test_sandbox_escape.py",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/ops-spec-gen/tests/test_shape_eval.py",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/ops-spec-gen/tests/test_shape_literal.py",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/ops-spec-gen/tests/test_stage2_constraints.py",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/pypto-api-explore/evals/evals.json",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/pypto-docs-search/evals/evals.json",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/pypto-general-debug/evals/evals.json",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/pypto-golden-generate/evals/evals.json",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/pypto-intent-understand/evals/evals.json",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/pypto-memory-template/evals/evals.json",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/pypto-op-construct/evals/evals.json",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/pypto-op-design/evals/evals.json",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/pypto-op-develop/evals/evals.json",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/pypto-op-knowledge/evals/evals.json",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/pypto-op-perf-tune/evals/evals.json",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/pypto-op-perf-tune/perf-analyzer/evals/evals.json",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/pypto-op-perf-tune/tune-frontend/evals/evals.json",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/pypto-op-perf-tune/tune-incore/evals/evals.json",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/pypto-op-perf-tune/tune-orchestrator/evals/evals.json",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/pypto-op-perf-tune/tune-swimlane/evals/evals.json",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/pypto-op-plan/evals/evals.json",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/pypto-op-review/evals/evals.json",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/pypto-op-verify/evals/evals.json",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/pypto-orchestration-manual/evals/evals.json",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/pypto-precision-compare/evals/evals.json",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/pypto-precision-compare/precision-binary-search/evals/evals.json",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/pypto-precision-compare/precision-pass/evals/evals.json",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/pypto-precision-compare/precision-verify/evals/evals.json",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/pypto-precision-debug/evals/evals.json",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/samples/evals/evals.json",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/tilelang-api-best-practices/evals/evals.json",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/tilelang-api-best-practices/references",
+    "reason": "symlink"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/tilelang-env-check/evals/evals.json",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/tilelang-env-check/scripts",
+    "reason": "symlink"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/tilelang-op-design/evals/evals.json",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/tilelang-op-design/examples",
+    "reason": "symlink"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/tilelang-op-design/references",
+    "reason": "symlink"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/tilelang-op-develop/evals/evals.json",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/tilelang-op-develop/examples",
+    "reason": "symlink"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/tilelang-op-develop/references",
+    "reason": "symlink"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/tilelang-op-profiling/evals/evals.json",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/tilelang-op-test-design/evals/evals.json",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/tilelang-op-test-design/references",
+    "reason": "symlink"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/tilelang-op-test-design/scripts",
+    "reason": "symlink"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/tilelang-perf-optimization/Ascend950/evals/evals.json",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/tilelang-perf-optimization/evals/evals.json",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/tilelang-perf-optimization/references",
+    "reason": "symlink"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/tilelang-performance-best-practices/Ascend950/evals/evals.json",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/tilelang-performance-best-practices/evals/evals.json",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/tilelang-programming-model-guide/evals/evals.json",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/tilelang-programming-model-guide/references",
+    "reason": "symlink"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/tilelang-review/evals/evals.json",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/tilelang-review/scripts",
+    "reason": "symlink"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/tilelang-review/templates",
+    "reason": "symlink"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/tilelang-submodule-pull/evals/evals.json",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/tilelang-submodule-pull/scripts",
+    "reason": "symlink"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/torch-ascendc-op-extension/evals/evals.json",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/torch-ops-profiler/evals/evals.json",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/triton-latency-optimizer/evals/evals.json",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/triton-op-coding/evals/evals.json",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/triton-op-designer/evals/evals.json",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/triton-op-verifier/evals/evals.json",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/triton-op-verifier/scripts/tests/conftest.py",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/triton-op-verifier/scripts/tests/test_benchmark_multi_launch.py",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/triton-op-verifier/scripts/tests/test_benchmark_parse_fixes.py",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/triton-op-verifier/scripts/tests/test_collect_environment.py",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/triton-op-verifier/scripts/tests/test_fresh_cache.py",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/triton-op-verifier/scripts/tests/test_move_to_device.py",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/triton-op-verifier/scripts/tests/test_optional_none_output.py",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/triton-op-verifier/tests/conftest.py",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/triton-op-verifier/tests/test_freeze.py",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/triton-op-verifier/tests/test_integrity.py",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/triton-op-verifier/tests/test_npu_preflight.py",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/triton-op-verifier/tests/test_preflight_integration.py",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/triton-precision-debug/evals/evals.json",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/triton-simulator-optimizer/evals/evals.json",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "ops/triton-task-extractor/evals/evals.json",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "tools/asys-toolkit/evals/evals.json",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "tools/msaicerr-toolkit/evals/evals.json",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "tools/msnpureport-toolkit/evals/evals.json",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "tools/npu-objdump-toolkit/evals/evals.json",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "tools/npu-objdump-toolkit/tests/test_pc_cli.py",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "tools/tool-exception-dump/evals/evals.json",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "tools/tool-npu-check/evals/evals.json",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "tools/tool-npu-compute/evals/evals.json",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "tools/tool-npu-compute/evals/trigger-evals.json",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "tools/tool-npu-compute/tests/expected/collection-inspection.json",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "tools/tool-npu-compute/tests/expected/csv-inspection.json",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "tools/tool-npu-compute/tests/expected/hardware-info-inspection.json",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "tools/tool-npu-compute/tests/expected/metric-lookups.json",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "tools/tool-npu-compute/tests/expected/pipe-trace-inspection.json",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "tools/tool-npu-compute/tests/expected/section-lookups.json",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "tools/tool-npu-compute/tests/expected/summary-inspection.json",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "tools/tool-npu-compute/tests/fixtures/real-capture/ArithmeticUtilization.csv",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "tools/tool-npu-compute/tests/fixtures/real-capture/HardwareInfo.jsonl",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "tools/tool-npu-compute/tests/fixtures/real-capture/L2Cache.csv",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "tools/tool-npu-compute/tests/fixtures/real-capture/Memory.csv",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "tools/tool-npu-compute/tests/fixtures/real-capture/MemoryL0.csv",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "tools/tool-npu-compute/tests/fixtures/real-capture/MemoryUB.csv",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "tools/tool-npu-compute/tests/fixtures/real-capture/PipeTrace.json",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "tools/tool-npu-compute/tests/fixtures/real-capture/PipeUtilization.csv",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "tools/tool-npu-compute/tests/fixtures/real-capture/ResourceConflictRatio.csv",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "tools/tool-npu-compute/tests/fixtures/real-capture/fixture-manifest.json",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "tools/tool-npu-compute/tests/fixtures/real-capture/summary.jsonl",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "tools/tool-npu-compute/tests/test_catalog.py",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "tools/tool-npu-compute/tests/test_evals.py",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "tools/tool-npu-compute/tests/test_scripts.py",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "tools/tool-npu-compute/tests/test_structure.py",
+    "reason": "tests_or_runtime_directory"
+  },
+  {
+    "source": "cannbot-skills",
+    "path": "tools/tools-npu-debug-api/evals/evals.json",
+    "reason": "tests_or_runtime_directory"
+  }
+]

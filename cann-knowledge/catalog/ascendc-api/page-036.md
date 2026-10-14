@@ -1,0 +1,146 @@
+# ascendc-api: 2451–2520 / 3266
+
+文档ID可直接传给 read_knowledge；通过 GitHub 读取时，在包根路径后加 third_party/ 和文档ID。
+
+- **\_\_bfloat162ushort\_rn** · 89 行 · upstream
+  `cannbot-knowledge/knowledge/ops/ascendc/apis/simt_api/math_functions/bfloat16_type/bfloat16_precision_conversion_functions/_bfloat162ushort_rn.md`
+- **\_\_bfloat162ushort\_ru** · 89 行 · upstream
+  `cannbot-knowledge/knowledge/ops/ascendc/apis/simt_api/math_functions/bfloat16_type/bfloat16_precision_conversion_functions/_bfloat162ushort_ru.md`
+- **\_\_bfloat162ushort\_rz** · 89 行 · upstream
+  `cannbot-knowledge/knowledge/ops/ascendc/apis/simt_api/math_functions/bfloat16_type/bfloat16_precision_conversion_functions/_bfloat162ushort_rz.md`
+- **\_\_bfloat16\_as\_short** · 87 行 · upstream
+  `cannbot-knowledge/knowledge/ops/ascendc/apis/simt_api/math_functions/bfloat16_type/bfloat16_precision_conversion_functions/_bfloat16_as_short.md`
+- **\_\_bfloat16\_as\_ushort** · 87 行 · upstream
+  `cannbot-knowledge/knowledge/ops/ascendc/apis/simt_api/math_functions/bfloat16_type/bfloat16_precision_conversion_functions/_bfloat16_as_ushort.md`
+- **\_\_float22bfloat162\_rd** · 106 行 · upstream
+  `cannbot-knowledge/knowledge/ops/ascendc/apis/simt_api/math_functions/bfloat16_type/bfloat16_precision_conversion_functions/_float22bfloat162_rd.md`
+- **\_\_float22bfloat162\_rd\_sat** · 85 行 · upstream
+  `cannbot-knowledge/knowledge/ops/ascendc/apis/simt_api/math_functions/bfloat16_type/bfloat16_precision_conversion_functions/_float22bfloat162_rd_sat.md`
+- **\_\_float22bfloat162\_rn** · 105 行 · upstream
+  `cannbot-knowledge/knowledge/ops/ascendc/apis/simt_api/math_functions/bfloat16_type/bfloat16_precision_conversion_functions/_float22bfloat162_rn.md`
+- **\_\_float22bfloat162\_rn\_sat** · 85 行 · upstream
+  `cannbot-knowledge/knowledge/ops/ascendc/apis/simt_api/math_functions/bfloat16_type/bfloat16_precision_conversion_functions/_float22bfloat162_rn_sat.md`
+- **\_\_float22bfloat162\_rna** · 105 行 · upstream
+  `cannbot-knowledge/knowledge/ops/ascendc/apis/simt_api/math_functions/bfloat16_type/bfloat16_precision_conversion_functions/_float22bfloat162_rna.md`
+- **\_\_float22bfloat162\_rna\_sat** · 84 行 · upstream
+  `cannbot-knowledge/knowledge/ops/ascendc/apis/simt_api/math_functions/bfloat16_type/bfloat16_precision_conversion_functions/_float22bfloat162_rna_sat.md`
+- **\_\_float22bfloat162\_ru** · 104 行 · upstream
+  `cannbot-knowledge/knowledge/ops/ascendc/apis/simt_api/math_functions/bfloat16_type/bfloat16_precision_conversion_functions/_float22bfloat162_ru.md`
+- **\_\_float22bfloat162\_ru\_sat** · 85 行 · upstream
+  `cannbot-knowledge/knowledge/ops/ascendc/apis/simt_api/math_functions/bfloat16_type/bfloat16_precision_conversion_functions/_float22bfloat162_ru_sat.md`
+- **\_\_float22bfloat162\_rz** · 105 行 · upstream
+  `cannbot-knowledge/knowledge/ops/ascendc/apis/simt_api/math_functions/bfloat16_type/bfloat16_precision_conversion_functions/_float22bfloat162_rz.md`
+- **\_\_float22bfloat162\_rz\_sat** · 84 行 · upstream
+  `cannbot-knowledge/knowledge/ops/ascendc/apis/simt_api/math_functions/bfloat16_type/bfloat16_precision_conversion_functions/_float22bfloat162_rz_sat.md`
+- **\_\_float2bfloat16** · 100 行 · upstream
+  `cannbot-knowledge/knowledge/ops/ascendc/apis/simt_api/math_functions/bfloat16_type/bfloat16_precision_conversion_functions/_float2bfloat16.md`
+- **\_\_float2bfloat162\_rn** · 101 行 · upstream
+  `cannbot-knowledge/knowledge/ops/ascendc/apis/simt_api/math_functions/bfloat16_type/bfloat16_precision_conversion_functions/_float2bfloat162_rn.md`
+- **\_\_float2bfloat16\_rd** · 87 行 · upstream
+  `cannbot-knowledge/knowledge/ops/ascendc/apis/simt_api/math_functions/bfloat16_type/bfloat16_precision_conversion_functions/_float2bfloat16_rd.md`
+- **\_\_float2bfloat16\_rd\_sat** · 75 行 · upstream
+  `cannbot-knowledge/knowledge/ops/ascendc/apis/simt_api/math_functions/bfloat16_type/bfloat16_precision_conversion_functions/_float2bfloat16_rd_sat.md`
+- **\_\_float2bfloat16\_rn** · 87 行 · upstream
+  `cannbot-knowledge/knowledge/ops/ascendc/apis/simt_api/math_functions/bfloat16_type/bfloat16_precision_conversion_functions/_float2bfloat16_rn.md`
+- **\_\_float2bfloat16\_rn\_sat** · 78 行 · upstream
+  `cannbot-knowledge/knowledge/ops/ascendc/apis/simt_api/math_functions/bfloat16_type/bfloat16_precision_conversion_functions/_float2bfloat16_rn_sat.md`
+- **\_\_float2bfloat16\_rna** · 85 行 · upstream
+  `cannbot-knowledge/knowledge/ops/ascendc/apis/simt_api/math_functions/bfloat16_type/bfloat16_precision_conversion_functions/_float2bfloat16_rna.md`
+- **\_\_float2bfloat16\_rna\_sat** · 75 行 · upstream
+  `cannbot-knowledge/knowledge/ops/ascendc/apis/simt_api/math_functions/bfloat16_type/bfloat16_precision_conversion_functions/_float2bfloat16_rna_sat.md`
+- **\_\_float2bfloat16\_ru** · 85 行 · upstream
+  `cannbot-knowledge/knowledge/ops/ascendc/apis/simt_api/math_functions/bfloat16_type/bfloat16_precision_conversion_functions/_float2bfloat16_ru.md`
+- **\_\_float2bfloat16\_ru\_sat** · 74 行 · upstream
+  `cannbot-knowledge/knowledge/ops/ascendc/apis/simt_api/math_functions/bfloat16_type/bfloat16_precision_conversion_functions/_float2bfloat16_ru_sat.md`
+- **\_\_float2bfloat16\_rz** · 84 行 · upstream
+  `cannbot-knowledge/knowledge/ops/ascendc/apis/simt_api/math_functions/bfloat16_type/bfloat16_precision_conversion_functions/_float2bfloat16_rz.md`
+- **\_\_float2bfloat16\_rz\_sat** · 74 行 · upstream
+  `cannbot-knowledge/knowledge/ops/ascendc/apis/simt_api/math_functions/bfloat16_type/bfloat16_precision_conversion_functions/_float2bfloat16_rz_sat.md`
+- **\_\_floats2bfloat162\_rn** · 102 行 · upstream
+  `cannbot-knowledge/knowledge/ops/ascendc/apis/simt_api/math_functions/bfloat16_type/bfloat16_precision_conversion_functions/_floats2bfloat162_rn.md`
+- **\_\_half2bfloat16\_rd** · 83 行 · upstream
+  `cannbot-knowledge/knowledge/ops/ascendc/apis/simt_api/math_functions/bfloat16_type/bfloat16_precision_conversion_functions/_half2bfloat16_rd.md`
+- **\_\_half2bfloat16\_rn** · 83 行 · upstream
+  `cannbot-knowledge/knowledge/ops/ascendc/apis/simt_api/math_functions/bfloat16_type/bfloat16_precision_conversion_functions/_half2bfloat16_rn.md`
+- **\_\_half2bfloat16\_rna** · 82 行 · upstream
+  `cannbot-knowledge/knowledge/ops/ascendc/apis/simt_api/math_functions/bfloat16_type/bfloat16_precision_conversion_functions/_half2bfloat16_rna.md`
+- **\_\_half2bfloat16\_ru** · 82 行 · upstream
+  `cannbot-knowledge/knowledge/ops/ascendc/apis/simt_api/math_functions/bfloat16_type/bfloat16_precision_conversion_functions/_half2bfloat16_ru.md`
+- **\_\_half2bfloat16\_rz** · 82 行 · upstream
+  `cannbot-knowledge/knowledge/ops/ascendc/apis/simt_api/math_functions/bfloat16_type/bfloat16_precision_conversion_functions/_half2bfloat16_rz.md`
+- **\_\_halves2bfloat162** · 98 行 · upstream
+  `cannbot-knowledge/knowledge/ops/ascendc/apis/simt_api/math_functions/bfloat16_type/bfloat16_precision_conversion_functions/_halves2bfloat162.md`
+- **\_\_high2bfloat16** · 103 行 · upstream
+  `cannbot-knowledge/knowledge/ops/ascendc/apis/simt_api/math_functions/bfloat16_type/bfloat16_precision_conversion_functions/_high2bfloat16.md`
+- **\_\_high2bfloat162** · 101 行 · upstream
+  `cannbot-knowledge/knowledge/ops/ascendc/apis/simt_api/math_functions/bfloat16_type/bfloat16_precision_conversion_functions/_high2bfloat162.md`
+- **\_\_high2float** · 103 行 · upstream
+  `cannbot-knowledge/knowledge/ops/ascendc/apis/simt_api/math_functions/bfloat16_type/bfloat16_precision_conversion_functions/_high2float.md`
+- **\_\_highs2bfloat162** · 102 行 · upstream
+  `cannbot-knowledge/knowledge/ops/ascendc/apis/simt_api/math_functions/bfloat16_type/bfloat16_precision_conversion_functions/_highs2bfloat162.md`
+- **\_\_int2bfloat16\_rd** · 81 行 · upstream
+  `cannbot-knowledge/knowledge/ops/ascendc/apis/simt_api/math_functions/bfloat16_type/bfloat16_precision_conversion_functions/_int2bfloat16_rd.md`
+- **\_\_int2bfloat16\_rn** · 84 行 · upstream
+  `cannbot-knowledge/knowledge/ops/ascendc/apis/simt_api/math_functions/bfloat16_type/bfloat16_precision_conversion_functions/_int2bfloat16_rn.md`
+- **\_\_int2bfloat16\_rna** · 82 行 · upstream
+  `cannbot-knowledge/knowledge/ops/ascendc/apis/simt_api/math_functions/bfloat16_type/bfloat16_precision_conversion_functions/_int2bfloat16_rna.md`
+- **\_\_int2bfloat16\_ru** · 85 行 · upstream
+  `cannbot-knowledge/knowledge/ops/ascendc/apis/simt_api/math_functions/bfloat16_type/bfloat16_precision_conversion_functions/_int2bfloat16_ru.md`
+- **\_\_int2bfloat16\_rz** · 83 行 · upstream
+  `cannbot-knowledge/knowledge/ops/ascendc/apis/simt_api/math_functions/bfloat16_type/bfloat16_precision_conversion_functions/_int2bfloat16_rz.md`
+- **\_\_ll2bfloat16\_rd** · 83 行 · upstream
+  `cannbot-knowledge/knowledge/ops/ascendc/apis/simt_api/math_functions/bfloat16_type/bfloat16_precision_conversion_functions/_ll2bfloat16_rd.md`
+- **\_\_ll2bfloat16\_rn** · 83 行 · upstream
+  `cannbot-knowledge/knowledge/ops/ascendc/apis/simt_api/math_functions/bfloat16_type/bfloat16_precision_conversion_functions/_ll2bfloat16_rn.md`
+- **\_\_ll2bfloat16\_rna** · 89 行 · upstream
+  `cannbot-knowledge/knowledge/ops/ascendc/apis/simt_api/math_functions/bfloat16_type/bfloat16_precision_conversion_functions/_ll2bfloat16_rna.md`
+- **\_\_ll2bfloat16\_ru** · 83 行 · upstream
+  `cannbot-knowledge/knowledge/ops/ascendc/apis/simt_api/math_functions/bfloat16_type/bfloat16_precision_conversion_functions/_ll2bfloat16_ru.md`
+- **\_\_ll2bfloat16\_rz** · 81 行 · upstream
+  `cannbot-knowledge/knowledge/ops/ascendc/apis/simt_api/math_functions/bfloat16_type/bfloat16_precision_conversion_functions/_ll2bfloat16_rz.md`
+- **\_\_low2bfloat16** · 103 行 · upstream
+  `cannbot-knowledge/knowledge/ops/ascendc/apis/simt_api/math_functions/bfloat16_type/bfloat16_precision_conversion_functions/_low2bfloat16.md`
+- **\_\_low2bfloat162** · 103 行 · upstream
+  `cannbot-knowledge/knowledge/ops/ascendc/apis/simt_api/math_functions/bfloat16_type/bfloat16_precision_conversion_functions/_low2bfloat162.md`
+- **\_\_low2float** · 102 行 · upstream
+  `cannbot-knowledge/knowledge/ops/ascendc/apis/simt_api/math_functions/bfloat16_type/bfloat16_precision_conversion_functions/_low2float.md`
+- **\_\_lowhigh2highlow** · 101 行 · upstream
+  `cannbot-knowledge/knowledge/ops/ascendc/apis/simt_api/math_functions/bfloat16_type/bfloat16_precision_conversion_functions/_lowhigh2highlow.md`
+- **\_\_lows2bfloat162** · 110 行 · upstream
+  `cannbot-knowledge/knowledge/ops/ascendc/apis/simt_api/math_functions/bfloat16_type/bfloat16_precision_conversion_functions/_lows2bfloat162.md`
+- **\_\_short2bfloat16\_rd** · 88 行 · upstream
+  `cannbot-knowledge/knowledge/ops/ascendc/apis/simt_api/math_functions/bfloat16_type/bfloat16_precision_conversion_functions/_short2bfloat16_rd.md`
+- **\_\_short2bfloat16\_rn** · 88 行 · upstream
+  `cannbot-knowledge/knowledge/ops/ascendc/apis/simt_api/math_functions/bfloat16_type/bfloat16_precision_conversion_functions/_short2bfloat16_rn.md`
+- **\_\_short2bfloat16\_ru** · 88 行 · upstream
+  `cannbot-knowledge/knowledge/ops/ascendc/apis/simt_api/math_functions/bfloat16_type/bfloat16_precision_conversion_functions/_short2bfloat16_ru.md`
+- **\_\_short2bfloat16\_rz** · 88 行 · upstream
+  `cannbot-knowledge/knowledge/ops/ascendc/apis/simt_api/math_functions/bfloat16_type/bfloat16_precision_conversion_functions/_short2bfloat16_rz.md`
+- **\_\_short\_as\_bfloat16** · 88 行 · upstream
+  `cannbot-knowledge/knowledge/ops/ascendc/apis/simt_api/math_functions/bfloat16_type/bfloat16_precision_conversion_functions/_short_as_bfloat16.md`
+- **\_\_uint2bfloat16\_rd** · 82 行 · upstream
+  `cannbot-knowledge/knowledge/ops/ascendc/apis/simt_api/math_functions/bfloat16_type/bfloat16_precision_conversion_functions/_uint2bfloat16_rd.md`
+- **\_\_uint2bfloat16\_rn** · 83 行 · upstream
+  `cannbot-knowledge/knowledge/ops/ascendc/apis/simt_api/math_functions/bfloat16_type/bfloat16_precision_conversion_functions/_uint2bfloat16_rn.md`
+- **\_\_uint2bfloat16\_rna** · 81 行 · upstream
+  `cannbot-knowledge/knowledge/ops/ascendc/apis/simt_api/math_functions/bfloat16_type/bfloat16_precision_conversion_functions/_uint2bfloat16_rna.md`
+- **\_\_uint2bfloat16\_ru** · 84 行 · upstream
+  `cannbot-knowledge/knowledge/ops/ascendc/apis/simt_api/math_functions/bfloat16_type/bfloat16_precision_conversion_functions/_uint2bfloat16_ru.md`
+- **\_\_uint2bfloat16\_rz** · 83 行 · upstream
+  `cannbot-knowledge/knowledge/ops/ascendc/apis/simt_api/math_functions/bfloat16_type/bfloat16_precision_conversion_functions/_uint2bfloat16_rz.md`
+- **\_\_ull2bfloat16\_rd** · 85 行 · upstream
+  `cannbot-knowledge/knowledge/ops/ascendc/apis/simt_api/math_functions/bfloat16_type/bfloat16_precision_conversion_functions/_ull2bfloat16_rd.md`
+- **\_\_ull2bfloat16\_rn** · 82 行 · upstream
+  `cannbot-knowledge/knowledge/ops/ascendc/apis/simt_api/math_functions/bfloat16_type/bfloat16_precision_conversion_functions/_ull2bfloat16_rn.md`
+- **\_\_ull2bfloat16\_rna** · 83 行 · upstream
+  `cannbot-knowledge/knowledge/ops/ascendc/apis/simt_api/math_functions/bfloat16_type/bfloat16_precision_conversion_functions/_ull2bfloat16_rna.md`
+- **\_\_ull2bfloat16\_ru** · 83 行 · upstream
+  `cannbot-knowledge/knowledge/ops/ascendc/apis/simt_api/math_functions/bfloat16_type/bfloat16_precision_conversion_functions/_ull2bfloat16_ru.md`
+- **\_\_ull2bfloat16\_rz** · 83 行 · upstream
+  `cannbot-knowledge/knowledge/ops/ascendc/apis/simt_api/math_functions/bfloat16_type/bfloat16_precision_conversion_functions/_ull2bfloat16_rz.md`
+- **\_\_ushort2bfloat16\_rd** · 88 行 · upstream
+  `cannbot-knowledge/knowledge/ops/ascendc/apis/simt_api/math_functions/bfloat16_type/bfloat16_precision_conversion_functions/_ushort2bfloat16_rd.md`
+- **\_\_ushort2bfloat16\_rn** · 88 行 · upstream
+  `cannbot-knowledge/knowledge/ops/ascendc/apis/simt_api/math_functions/bfloat16_type/bfloat16_precision_conversion_functions/_ushort2bfloat16_rn.md`
+
+下一页：page-037.md

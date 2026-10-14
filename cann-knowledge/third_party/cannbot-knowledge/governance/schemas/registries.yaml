@@ -1,0 +1,495 @@
+# ----------------------------------------------------------------------------------------------------------
+# Copyright (c) 2026 Huawei Technologies Co., Ltd.
+# This program is free software, you can redistribute it and/or modify it under the terms and conditions of
+# CANN Open Software License Agreement Version 2.0 (the "License").
+# Please refer to the License for details. You may not use this file except in compliance with the License.
+# THIS SOFTWARE IS PROVIDED ON AN "AS IS" BASIS, WITHOUT WARRANTIES OF ANY KIND, EITHER EXPRESS OR IMPLIED,
+# INCLUDING BUT NOT LIMITED TO NON-INFRINGEMENT, MERCHANTABILITY, OR FITNESS FOR A PARTICULAR PURPOSE.
+# See LICENSE in the root of the software repository for the full text of the License.
+# ----------------------------------------------------------------------------------------------------------
+
+domains:
+  common:
+    description: 跨领域公共知识
+    direct_types: [glossaries]
+  contrib:
+    description: 社区贡献的工程知识
+    direct_types: []
+  ops:
+    description: 算子语义、设计、实现、调试与优化
+    direct_types: []
+    precreate_routes: true
+  graph:
+    description: 图编译和图优化
+    direct_types: []
+  model:
+    description: 模型推理、训练、空间智能与具身智能
+    direct_types: []
+    precreate_routes: true
+  runtime:
+    description: CANN Runtime、API 与故障诊断
+    direct_types: [concepts, apis, runbooks]
+
+technologies:
+  ascendc:
+    type: language
+    description: Ascend C 算子编程语言与 API
+    domains: [ops, contrib]
+  triton:
+    type: dsl
+    description: Triton 算子编程 DSL
+    domains: [ops]
+  tilelang:
+    type: dsl
+    description: TileLang 算子编程 DSL
+    domains: [ops]
+  pypto:
+    type: dsl
+    description: PyPTO 算子编程 DSL
+    domains: [ops]
+  torch_compile:
+    type: framework
+    description: PyTorch torch.compile 图编译技术栈
+    domains: [graph]
+  ge:
+    type: engine
+    description: Graph Engine 图执行与优化技术栈
+    domains: [graph]
+
+scopes:
+  shared:
+    description: 同一领域内不依赖具体技术栈的知识
+    domains: [ops, graph]
+  platforms:
+    description: 产品、芯片、NPU 架构和兼容关系
+    domains: [common]
+  toolchains:
+    description: CANN 环境、构建和工具链
+    domains: [common]
+  observability:
+    description: Profiling、日志和指标
+    domains: [common]
+  inference:
+    description: 模型推理知识
+    domains: [model]
+  training:
+    description: 模型训练知识
+    domains: [model]
+  spatial:
+    description: 空间智能模型与算法知识
+    domains: [model]
+  embodied:
+    description: 具身智能模型与系统知识
+    domains: [model]
+
+local_sources:
+  ops_cv:
+    description: 固定到算子知识来源提交的 CANN ops-cv 源码
+    kind: git
+    root: cann-ops-raw/ascendc/ops-cv
+    fetch_script: get_resources.sh
+    repository: https://gitcode.com/cann/ops-cv
+    revisions:
+      - bb717d075d129fd1fc7b96b2886824a1d153ed2f
+  ops_math:
+    description: 固定到算子知识来源提交的 CANN ops-math 源码
+    kind: git
+    root: cann-ops-raw/ascendc/ops-math
+    fetch_script: get_resources.sh
+    repository: https://gitcode.com/cann/ops-math
+    revisions:
+      - 165d41f02a43a62324b434cb6bda7c533b14da3e
+  ops_nn:
+    description: 固定到算子知识来源提交的 CANN ops-nn 源码
+    kind: git
+    root: cann-ops-raw/ascendc/ops-nn
+    fetch_script: get_resources.sh
+    repository: https://gitcode.com/cann/ops-nn
+    revisions:
+      - 955f8b33985b6d72989ebff341bb9c2c564a51bc
+  ops_transformer:
+    description: 固定到算子知识来源提交的 CANN ops-transformer 源码
+    kind: git
+    root: cann-ops-raw/ascendc/ops-transformer
+    fetch_script: get_resources.sh
+    repository: https://gitcode.com/cann/ops-transformer
+    revisions:
+      - be33d95bb755cedec3108f70805c1874d1792540
+  cann_docs_raw:
+    description: 从官方持续更新归档恢复的 Ascend C 文档
+    root: cann-docs-raw
+    fetch_script: get_resources.sh
+    archive_url: https://ascend-ci.obs.cn-north-4.myhuaweicloud.com/package/doc/Ascend-cann-docs-examples.tar.gz
+    mirror:
+      source_root: asc-devkit/docs/zh
+      api_roots: [api]
+      guide_roots: [guide]
+      guide_files: [quick_start.md, asc_how_to_choose_api.md]
+      exclude: [guide/figures/image_compression_guide.md]
+      navigation_policy: index_only
+      api_operator_display_limit: 10
+      omit_section_title_contains: [产品支持情况]
+      upstream_repository: https://gitcode.com/cann/asc-devkit
+      upstream_revision: 639b2b5c1031188107d23d785d52b935f1b4f13b
+      ambiguous_relation_symbols:
+        - Alloc
+        - Commit
+        - DataType
+        - Destroy
+        - Extract
+        - Finalize
+        - Get
+        - GetDataPtr
+        - GetDim
+        - GetIndex
+        - Init
+        - InitValue
+        - Load
+        - Query
+        - RoundMode
+        - Scalar
+        - ScalarList
+        - SetDim
+        - SetShape
+        - SetTail
+        - SetTiling
+        - Store
+        - Tensor
+        - Version
+        - assert
+        - cast
+        - ceil_div
+        - ceil_division
+        - conditional
+        - end
+        - fill
+        - get_tensor_c
+        - load
+        - log
+        - max
+        - min
+        - or
+        - rank
+        - select
+        - shape
+        - size
+        - slice
+        - sqrt
+        - store
+        - stride
+        - tensor
+        - transpose
+        - tuple
+        - wait
+        - workspace
+        - xor
+      reviewed_relation_rejections:
+        - api: knowledge/ops/ascendc/apis/simt_api/math_functions/float_math_functions/expf.md
+          operator: knowledge/ops/ascendc/operators/aclnn/nn/foreach/foreach_expm1_950.md
+        - api: knowledge/ops/ascendc/apis/simt_api/math_functions/float_math_functions/isfinite.md
+          operator: knowledge/ops/ascendc/operators/aclnn/nn/activation/hardsigmoid_backward_950.md
+        - api: knowledge/ops/ascendc/apis/simt_api/math_functions/float_math_functions/isfinite.md
+          operator: knowledge/ops/ascendc/operators/aclnn/nn/activation/swiglu_group_quant_950.md
+        - api: knowledge/ops/ascendc/apis/simt_api/math_functions/float_math_functions/isfinite.md
+          operator: knowledge/ops/ascendc/operators/direct/math/math/exp_950.md
+        - api: knowledge/ops/ascendc/apis/simd_api/basic_api/reg_vector_compute/type_conversion/cast.md
+          operator: knowledge/ops/ascendc/operators/aclnn/math/math/logical_not_950.md
+        - api: knowledge/ops/ascendc/apis/simd_api/basic_api/data_structures/global_tensor/set_l2_cache_hint.md
+          operator: knowledge/ops/ascendc/operators/aclnn/transformer/mhc/mhc_post_950.md
+        - api: knowledge/ops/ascendc/apis/simd_api/adv_api/math_compute/bitwise_or_interface/bitwise_or.md
+          operator: knowledge/ops/ascendc/operators/aclnn/math/math/bitwise_or_tensor_950.md
+        - api: knowledge/ops/ascendc/apis/simd_api/adv_api/activation_functions/soft_max_interface/softmax_grad.md
+          operator: knowledge/ops/ascendc/operators/aclnn/nn/activation/softmax_backward_950.md
+        - api: knowledge/ops/ascendc/apis/simd_api/adv_api/reduction_operations/reduce_all_interface/reduce_all.md
+          operator: knowledge/ops/ascendc/operators/aclnn/math/math/all_950.md
+        - api: knowledge/ops/ascendc/apis/simd_api/basic_api/aux_data_structures/tensor_desc/get_data_ptr.md
+          operator: knowledge/ops/ascendc/operators/aclnn/nn/foreach/foreach_tan_950.md
+        - api: knowledge/ops/ascendc/apis/utils_api/cpp_stdlib/math_functions/ceil_div.md
+          operator: knowledge/ops/ascendc/operators/direct/nn/activation/sigmoid_950.md
+        - api: knowledge/ops/ascendc/apis/utils_api/cpp_stdlib/math_functions/ceil_division.md
+          operator: knowledge/ops/ascendc/operators/direct/nn/activation/sigmoid_950.md
+        - api: knowledge/ops/ascendc/apis/simd_api/adv_api/activation_functions/sigmoid_interface/sigmoid.md
+          operator: knowledge/ops/ascendc/operators/aclnn/nn/activation/inplace_sigmoid.md
+        - api: knowledge/ops/ascendc/apis/utils_api/prototype_register_management/op_def/aicpu.md
+          operator: knowledge/ops/ascendc/operators/aclnn/transformer/mc2/allto_all_matmul.md
+
+paths:
+  operator_call_modes: [aclnn, direct]
+  operator_categories:
+    cv: [image, objdetect]
+    math: [conversion, math, random]
+    nn: [activation, conv, foreach, index, loss, matmul, norm, optim, pooling, quant, rnn, vfusion]
+    transformer: [attention, ffn, gmm, mc2, mhc, moe, posembedding]
+  runbook_areas: [compilation, runtime, precision, performance, validations]
+
+platforms:
+  a2:
+    description: Atlas A2 系列
+  a3:
+    description: Atlas A3 系列
+  "950":
+    description: Ascend 950 系列（包含旧称 Atlas A5）
+  "310p":
+    description: Ascend 310P 系列
+  "910":
+    description: 早期 Ascend 910 系列
+  kirin_x90:
+    description: Kirin X90
+  kirin_9030:
+    description: Kirin 9030
+  agnostic:
+    description: 结论按定义与硬件平台无关，不会随平台注册表扩张而改变含义
+
+tags:
+  task.design:
+    dimension: task
+    description: 设计语义、算法、切分或数据流
+  task.implementation:
+    dimension: task
+    description: 编写或集成实现
+  task.debugging:
+    dimension: task
+    description: 定位构建、运行时、精度或性能问题
+  task.optimization:
+    dimension: task
+    description: 优化时延、吞吐或资源使用
+  task.testing:
+    dimension: task
+    description: 设计验证和测试
+  task.migration:
+    dimension: task
+    description: 跨版本、平台或技术迁移
+  task.lookup:
+    dimension: task
+    description: 查询术语、接口或规范事实
+  topic.activation:
+    dimension: topic
+    description: 激活函数与实现
+  topic.alignment:
+    dimension: topic
+    description: 地址、长度和数据块对齐
+  topic.compilation:
+    dimension: topic
+    description: 编译、构建和接口签名
+  topic.data_movement:
+    dimension: topic
+    description: 存储层级间的数据搬运
+  topic.memory:
+    dimension: topic
+    description: 存储层级、容量和生命周期
+  topic.precision:
+    dimension: topic
+    description: 数值精度与误差
+  topic.terminology:
+    dimension: topic
+    description: 受控术语和定义
+  topic.architecture:
+    dimension: topic
+    description: NPU、执行引擎和软件栈架构
+  topic.model_architecture:
+    dimension: topic
+    description: 模型、网络模块与端到端结构
+  topic.attention:
+    dimension: topic
+    description: Attention 结构、算子路径与缓存语义
+  topic.mixture_of_experts:
+    dimension: topic
+    description: MoE 路由、专家布局与执行机制
+  topic.parallelism:
+    dimension: topic
+    description: 模型训练或推理的并行与切分策略
+  topic.kv_cache:
+    dimension: topic
+    description: KV Cache 布局、管理、传输与复用
+  topic.graph_execution:
+    dimension: topic
+    description: 模型图捕获、编译、缓存与执行
+  topic.speculative_decoding:
+    dimension: topic
+    description: 投机解码、草稿模型与接受策略
+  topic.model_serving:
+    dimension: topic
+    description: 在线服务、调度、部署与请求处理
+  topic.reinforcement_learning:
+    dimension: topic
+    description: 强化学习、rollout、奖励与策略更新
+  topic.checkpointing:
+    dimension: topic
+    description: Checkpoint 保存、恢复、切分与重计算
+  topic.multimodal:
+    dimension: topic
+    description: 多模态模型、输入与跨模态处理
+  topic.diffusion:
+    dimension: topic
+    description: 扩散模型、采样与生成过程
+  topic.data_pipeline:
+    dimension: topic
+    description: 数据加载、预处理、打包与流水组织
+  topic.three_dimensional_reconstruction:
+    dimension: topic
+    description: 三维重建、点云、深度与 Gaussian Splatting
+  topic.rendering:
+    dimension: topic
+    description: 投影、光栅化、可见性与图像合成
+  topic.long_context:
+    dimension: topic
+    description: 长序列上下文建模与处理
+  topic.optimizer:
+    dimension: topic
+    description: 训练优化器、状态表示与更新机制
+  topic.model_adaptation:
+    dimension: topic
+    description: 继续预训练、监督微调、LoRA 与量化感知适配
+  topic.programming_model:
+    dimension: topic
+    description: 并行执行和算子编程模型
+  topic.tiling:
+    dimension: topic
+    description: 张量切分、核间划分和片上资源适配
+  topic.compute.composite:
+    dimension: topic
+    description: 由多个计算阶段组合而成的复合计算
+  topic.compute.elementwise.activation:
+    dimension: topic
+    description: 逐元素激活计算
+  topic.compute.elementwise.arithmetic:
+    dimension: topic
+    description: 逐元素算术计算
+  topic.compute.elementwise.comparison_logic:
+    dimension: topic
+    description: 逐元素比较与逻辑计算
+  topic.compute.elementwise.math_function:
+    dimension: topic
+    description: 逐元素数学函数
+  topic.compute.elementwise.type_conversion:
+    dimension: topic
+    description: 逐元素类型转换
+  topic.compute.indexing:
+    dimension: topic
+    description: 索引、选取与散布计算
+  topic.compute.neighborhood.convolution:
+    dimension: topic
+    description: 邻域卷积计算
+  topic.compute.normalization:
+    dimension: topic
+    description: 归一化计算
+  topic.compute.ordering:
+    dimension: topic
+    description: 排序与选择计算
+  topic.compute.quantization:
+    dimension: topic
+    description: 量化与反量化计算
+  topic.compute.random_sampling:
+    dimension: topic
+    description: 随机数与采样计算
+  topic.compute.reduction:
+    dimension: topic
+    description: 归约计算
+  topic.data_movement.communication.collective_communication:
+    dimension: topic
+    description: 集合通信数据移动
+  topic.data_movement.data_copy:
+    dimension: topic
+    description: 存储层级间的数据复制
+  topic.data_movement.layout_transform:
+    dimension: topic
+    description: 数据布局转换
+  topic.data_movement.memory_access:
+    dimension: topic
+    description: 内存访问语义与约束
+  topic.implementation:
+    dimension: topic
+    description: 实现方法与工程约束
+  topic.implementation.api_layer:
+    dimension: topic
+    description: API 分层与接口职责
+  topic.implementation.api_layer.aicpu_api:
+    dimension: topic
+    description: AI CPU API
+  topic.implementation.api_layer.basic_api:
+    dimension: topic
+    description: 基础 API
+  topic.implementation.api_layer.c_api:
+    dimension: topic
+    description: C API
+  topic.implementation.api_layer.high_level_api:
+    dimension: topic
+    description: 高阶 API
+  topic.implementation.api_layer.simt_api:
+    dimension: topic
+    description: SIMT API
+  topic.implementation.api_layer.utils_api:
+    dimension: topic
+    description: 工具类 API
+  topic.implementation.atomic:
+    dimension: topic
+    description: 原子操作与原子写入
+  topic.implementation.debugging:
+    dimension: topic
+    description: 实现阶段的调试方法
+  topic.implementation.masking:
+    dimension: topic
+    description: 掩码控制与条件执行
+  topic.implementation.memory_management:
+    dimension: topic
+    description: 内存申请、复用与释放
+  topic.implementation.operator_registration:
+    dimension: topic
+    description: 算子注册与工程接入
+  topic.implementation.pipeline:
+    dimension: topic
+    description: 流水并行与阶段组织
+  topic.implementation.synchronization:
+    dimension: topic
+    description: 同步原语与执行顺序
+  topic.implementation.tiling:
+    dimension: topic
+    description: Tiling 实现接口与工程流程
+  topic.performance.analysis:
+    dimension: topic
+    description: 性能分析与瓶颈定位
+  topic.performance.optimization.optimization_overview:
+    dimension: topic
+    description: 优化方法总览
+  topic.programming_model.cooperative_groups:
+    dimension: topic
+    description: 协作组编程模型
+  topic.programming_model.development_mode.hybrid_programming:
+    dimension: topic
+    description: 混合编程开发模式
+  topic.programming_model.development_mode.tensor_programming:
+    dimension: topic
+    description: 张量编程开发模式
+  topic.programming_model.execution_model.simd:
+    dimension: topic
+    description: SIMD 执行模型
+  topic.programming_model.execution_model.simt:
+    dimension: topic
+    description: SIMT 执行模型
+  topic.programming_model.execution_unit:
+    dimension: topic
+    description: 执行单元与职责划分
+  topic.programming_model.execution_unit.cube:
+    dimension: topic
+    description: Cube 计算单元
+  topic.programming_model.execution_unit.scalar:
+    dimension: topic
+    description: Scalar 计算单元
+  topic.programming_model.execution_unit.vector:
+    dimension: topic
+    description: Vector 计算单元
+  topic.programming_model.language_extension:
+    dimension: topic
+    description: 编程语言扩展
+  topic.programming_model.system_variable:
+    dimension: topic
+    description: 编程模型系统变量
+  topic.quality.compatibility.deprecation:
+    dimension: topic
+    description: 弃用与兼容性边界
+  topic.quality.compatibility.version_migration:
+    dimension: topic
+    description: 版本迁移与兼容性变化
+  paradigm.elementwise:
+    dimension: paradigm
+    description: 逐元素计算范式

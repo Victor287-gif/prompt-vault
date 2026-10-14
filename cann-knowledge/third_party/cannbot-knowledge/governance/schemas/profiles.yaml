@@ -1,0 +1,57 @@
+# ----------------------------------------------------------------------------------------------------------
+# Copyright (c) 2026 Huawei Technologies Co., Ltd.
+# This program is free software, you can redistribute it and/or modify it under the terms and conditions of
+# CANN Open Software License Agreement Version 2.0 (the "License").
+# Please refer to the License for details. You may not use this file except in compliance with the License.
+# THIS SOFTWARE IS PROVIDED ON AN "AS IS" BASIS, WITHOUT WARRANTIES OF ANY KIND, EITHER EXPRESS OR IMPLIED,
+# INCLUDING BUT NOT LIMITED TO NON-INFRINGEMENT, MERCHANTABILITY, OR FITNESS FOR A PARTICULAR PURPOSE.
+# See LICENSE in the root of the software repository for the full text of the License.
+# ----------------------------------------------------------------------------------------------------------
+
+common_required:
+  - type
+  - title
+  - description
+  - tags
+  - status
+  - sources
+  - created_at
+  - updated_at
+
+profiles:
+  concepts:
+    okf_type: Concept
+    required: [platforms]
+    optional: [cann_versions, aliases, verified, replaced_by]
+  apis:
+    okf_type: API
+    required: [platforms]
+    optional: [cann_versions, source_headers, aliases, verified, replaced_by]
+  examples:
+    okf_type: Example
+    required: [platforms]
+    optional: [cann_versions, verified, replaced_by]
+  guides:
+    okf_type: Guide
+    required: [platforms]
+    optional: [cann_versions, aliases, verified, replaced_by]
+  operators:
+    okf_type: Operator
+    required: [platforms]
+    optional: [cann_versions, verified, replaced_by]
+  optimizations:
+    okf_type: Optimization
+    required: [platforms]
+    optional: [cann_versions, verified, replaced_by]
+  runbooks:
+    okf_type: Runbook
+    required: [platforms]
+    optional: [aliases, verified, replaced_by]
+  interoperability:
+    okf_type: Interoperability
+    required: [platforms, source_technology, target_technology]
+    optional: [cann_versions, verified, replaced_by]
+  glossaries:
+    okf_type: Glossary
+    required: []
+    optional: [aliases, verified, replaced_by]

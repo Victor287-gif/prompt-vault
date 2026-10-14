@@ -1,0 +1,56 @@
+{
+  "format_version": 1,
+  "built_at_utc": "2026-10-14T04:18:22.847143+00:00",
+  "purpose": "Huawei Ascend/CANN operator research only",
+  "upstream": [
+    {
+      "id": "cannbot-skills",
+      "url": "https://gitcode.com/cann/cannbot-skills",
+      "commit": "dd0180245b0c6fadfcc049943d8c79f9cb47adfe",
+      "commit_time": "2026-10-14T10:57:31+08:00",
+      "license": "CANN Open Software License Agreement 2.0",
+      "license_path": "third_party/cannbot-skills/LICENSE",
+      "selected_prefixes": [
+        "ops/",
+        "community/ops/",
+        "tools/",
+        "infra/repo-build-guide/",
+        "infra/repo-coding-rules/",
+        "infra/repo-knowledge/",
+        "infra/repo-op-templates/",
+        "infra/repo-test-develop/"
+      ],
+      "note": "Official repository snapshot; community/contrib retains its community status."
+    },
+    {
+      "id": "cannbot-knowledge",
+      "url": "https://gitcode.com/cann/cannbot-knowledge",
+      "commit": "ef37bed1bbec2782cb07d2b086e80361fc0ea3c0",
+      "commit_time": "2026-10-13T20:13:09+08:00",
+      "license": "CANN Open Software License Agreement 2.0",
+      "license_path": "third_party/cannbot-knowledge/LICENSE",
+      "selected_prefixes": [
+        "knowledge/ops/",
+        "knowledge/common/",
+        "knowledge/contrib/",
+        "governance/",
+        "recipes/",
+        ".agents/skills/knowledge-query/",
+        ".agents/skills/ascendc-api-knowledge-query/"
+      ],
+      "note": "Official repository snapshot; community/contrib retains its community status."
+    }
+  ],
+  "counts": {
+    "cannbot-skills": {
+      "files": 2350,
+      "bytes": 22048423
+    },
+    "cannbot-knowledge": {
+      "files": 7444,
+      "bytes": 71845249
+    }
+  },
+  "excluded_count": 328,
+  "scope": "No private CANN competition source, OJ records, credentials, or local DSH modifications."
+}

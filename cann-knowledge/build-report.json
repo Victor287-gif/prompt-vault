@@ -1,0 +1,94 @@
+{
+  "documents": 9774,
+  "chunks": 31321,
+  "text_bytes": 93838043,
+  "database_bytes": 354000896,
+  "topics": {
+    "architecture": {
+      "documents": 52,
+      "pages": 1,
+      "first": "catalog/architecture/page-001.md"
+    },
+    "ascendc-api": {
+      "documents": 3266,
+      "pages": 47,
+      "first": "catalog/ascendc-api/page-001.md"
+    },
+    "catlass": {
+      "documents": 79,
+      "pages": 2,
+      "first": "catalog/catlass/page-001.md"
+    },
+    "community-strategies": {
+      "documents": 648,
+      "pages": 10,
+      "first": "catalog/community-strategies/page-001.md"
+    },
+    "engineering": {
+      "documents": 823,
+      "pages": 12,
+      "first": "catalog/engineering/page-001.md"
+    },
+    "matmul": {
+      "documents": 567,
+      "pages": 9,
+      "first": "catalog/matmul/page-001.md"
+    },
+    "other-operator-knowledge": {
+      "documents": 2176,
+      "pages": 32,
+      "first": "catalog/other-operator-knowledge/page-001.md"
+    },
+    "pipeline-memory": {
+      "documents": 731,
+      "pages": 11,
+      "first": "catalog/pipeline-memory/page-001.md"
+    },
+    "precision-tests": {
+      "documents": 893,
+      "pages": 13,
+      "first": "catalog/precision-tests/page-001.md"
+    },
+    "profiling-debug": {
+      "documents": 230,
+      "pages": 4,
+      "first": "catalog/profiling-debug/page-001.md"
+    },
+    "pypto": {
+      "documents": 126,
+      "pages": 2,
+      "first": "catalog/pypto/page-001.md"
+    },
+    "reduction-broadcast": {
+      "documents": 1263,
+      "pages": 19,
+      "first": "catalog/reduction-broadcast/page-001.md"
+    },
+    "sync-scalar": {
+      "documents": 674,
+      "pages": 10,
+      "first": "catalog/sync-scalar/page-001.md"
+    },
+    "tilelang": {
+      "documents": 320,
+      "pages": 5,
+      "first": "catalog/tilelang/page-001.md"
+    },
+    "tiling": {
+      "documents": 686,
+      "pages": 10,
+      "first": "catalog/tiling/page-001.md"
+    },
+    "triton": {
+      "documents": 465,
+      "pages": 7,
+      "first": "catalog/triton/page-001.md"
+    }
+  },
+  "skipped_non_utf8": [],
+  "source_counts": {
+    "cannbot-knowledge": 7444,
+    "cannbot-skills": 2330
+  },
+  "script_execution": "None of the upstream scripts were executed."
+}
