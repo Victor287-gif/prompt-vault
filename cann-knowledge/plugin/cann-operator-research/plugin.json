@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "cann-operator-research",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "基于 CANNBot 官方仓库快照的算子研究知识入口，通过 GitHub MCP 或专用只读 MCP 按需查原文、核对架构与优化条件。独立封装，非官方产品。",
   "author": {
     "name": "Victor287-gif"

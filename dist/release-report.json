@@ -1,0 +1,18 @@
+{
+  "version": "1.0.0",
+  "artifacts": [
+    {
+      "name": "cann-operator-knowledge-1.0.0.zip",
+      "bytes": 40151974,
+      "sha256": "f4926071167002dce4c92565a07dbd57eb1e12de93a8c99bef8045b7548baab3"
+    },
+    {
+      "name": "cann-operator-research-skill-1.0.1.zip",
+      "bytes": 7444,
+      "sha256": "0dd283111769e2782a9f5a29c22c2277ed0995ef833861392c13c7acf0caffde"
+    }
+  ],
+  "tests_passed": true,
+  "zip_compression": "Deflate; prebuilt database excluded, rebuild script included",
+  "note": "MCP stdio/HTTP tested locally; dedicated server not persistently hosted. Skill uses existing GitHub MCP."
+}

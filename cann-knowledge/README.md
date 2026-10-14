@@ -16,7 +16,7 @@
 - `registry.jsonl`：每份可检索文本的来源、固定 commit、路径、行数、哈希与主题。不要一次塞入上下文。
 - `sources.lock.json`：上游固定版本和选编范围；`excluded-files.json`：排除项与原因。
 - `cann_knowledge/`：只读检索 MCP 与 CLI；支持中文子词和英文术语检索。
-- `index/knowledge.sqlite3`：压缩包包含预建索引；Git 仓库不存展开后的大数据库，可自行重建。
+- `index/knowledge.sqlite3`：本地生成的检索数据库，不随 Git 或 ZIP 分发；用构建脚本从所附原文重建。
 - `test-report.json`：本次 CPU 检索与 MCP 协议测试，不是 NPU 性能报告。
 - `plugin/`：可安装的单一 Skill 包，不直接启用上游全部 SKILL.md。
 
@@ -36,7 +36,7 @@ Python 3.10+。建议使用独立虚拟环境；不需要安装 CANN 或访问 N
 python -m venv .venv
 # 激活本项目虚拟环境后：
 python -m pip install -r requirements.txt
-# 从 Git 克隆时重建；使用完整 ZIP 的预建索引则无需此步：
+# 首次部署时从所附资料构建检索索引：
 python -m cann_knowledge.build_index --root .
 python -m cann_knowledge.server --root . --transport stdio
 ```
@@ -66,6 +66,8 @@ python tests/smoke_test.py
 
 重新获取官方仓库后，使用 extraction_policy.py 的 --source-root 与 --output 参数生成**新的输出目录**，检查新增来源和排除项，再构建索引、测试、发布新版本。不要直接覆盖正在使用的索引。
 
+压缩包保留全部本次选编原文与源码，不附带 354 MB 的可重建 SQLite 索引；网页 GitHub MCP 查询无需此数据库。
+
 快照不是实时同步。工程事实与知识分开：真实 Kernel、profiling 和 OJ 数据仍通过用户授权的工程 MCP 读取。
 
 ## Windows 路径
@@ -75,3 +77,13 @@ python tests/smoke_test.py
 ## 许可
 
 阅读 [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md) 及两份上游 LICENSE。原始资料用途受 CANN 2.0 条款约束；原创适配器许可不覆盖第三方内容。
+
+## 压缩包解压
+
+使用普通 ZIP/Deflate；支持常见解压工具。也可执行：
+
+```bash
+python -m zipfile -e cann-operator-knowledge-1.0.0.zip D:/ckb
+```
+
+进入生成的 `D:/ckb/cann-knowledge/` 目录，再按前文构建索引并启动本地 MCP。选用网页版 Skill 不需要下载或构建。
